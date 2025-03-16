@@ -13,6 +13,7 @@ namespace Rain
         {
 
             FirstDialogue fD = new FirstDialogue();
+            MultiWindow mWindow = new MultiWindow();
 
             void Instructions()
             {
@@ -106,9 +107,9 @@ namespace Rain
                 } while ((waiting == true) || (waitingTwo == true));
             }
 
-            Instructions();
-            fD.FirstScene();
+            //Instructions();
+            //fD.FirstScene();
         }
-       
+
     }
 }

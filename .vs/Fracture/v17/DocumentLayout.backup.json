@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|c:\\users\\antechei\\documents\\github\\fracture\\rain\\multiwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\multiwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|c:\\users\\antechei\\documents\\github\\fracture\\rain\\firstdialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeDocumentMoniker": "Rain\\Program.cs",
               "ToolTip": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeToolTip": "Rain\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAgwHAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T09:49:49.271Z",
               "EditorCaption": ""
@@ -52,13 +52,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MultiWindow.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\MultiWindow.cs",
               "RelativeDocumentMoniker": "Rain\\MultiWindow.cs",
               "ToolTip": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\MultiWindow.cs",
               "RelativeToolTip": "Rain\\MultiWindow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T03:52:32.826Z",
               "EditorCaption": ""
