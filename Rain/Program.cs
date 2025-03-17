@@ -11,10 +11,18 @@ namespace Rain
        
         static void Main(string[] args)
         {
+            //what it says on the box - put other class references in here to access their content
+            #region Class References
 
             FirstDialogue fD = new FirstDialogue();
             MultiWindow mWindow = new MultiWindow();
 
+            #endregion
+
+            //if you're gonna write a function in this class, put it in this region
+            #region Main Functions
+
+            //temp amusing tutorial thingy
             void Instructions()
             {
                 Console.WriteLine("\nWelcome to Rain.txt, aka my silly lil SlamJam2025 submission, aka a short text-based rpg about the rain, possibly?" +
@@ -107,8 +115,15 @@ namespace Rain
                 } while ((waiting == true) || (waitingTwo == true));
             }
 
-            //Instructions();
-            //fD.FirstScene();
+            #endregion
+
+            //put functions in here to run them as part of the program
+            #region Playing
+
+            Instructions();
+            fD.FirstScene();
+
+            #endregion
         }
 
     }
