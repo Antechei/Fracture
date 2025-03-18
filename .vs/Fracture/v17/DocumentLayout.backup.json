@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Github\\Fracture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|e:\\github\\fracture\\rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|e:\\github\\fracture\\rain\\firstdialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\firstdialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|E:\\Github\\Fracture\\rain\\firstdialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\firstdialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|E:\\Github\\Fracture\\rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|E:\\Github\\Fracture\\rain\\multiwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,30 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeDocumentMoniker": "Rain\\Program.cs",
               "ToolTip": "E:\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeToolTip": "Rain\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwHcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwJsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T09:49:49.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FirstDialogue.cs",
               "DocumentMoniker": "E:\\Github\\Fracture\\Rain\\FirstDialogue.cs",
               "RelativeDocumentMoniker": "Rain\\FirstDialogue.cs",
-              "ToolTip": "E:\\Github\\Fracture\\Rain\\FirstDialogue.cs*",
-              "RelativeToolTip": "Rain\\FirstDialogue.cs*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
+              "ToolTip": "E:\\Github\\Fracture\\Rain\\FirstDialogue.cs",
+              "RelativeToolTip": "Rain\\FirstDialogue.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T09:53:00.989Z",
               "EditorCaption": ""
@@ -58,10 +58,9 @@
               "RelativeDocumentMoniker": "Rain\\MultiWindow.cs",
               "ToolTip": "E:\\Github\\Fracture\\Rain\\MultiWindow.cs",
               "RelativeToolTip": "Rain\\MultiWindow.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T03:52:32.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T03:52:32.826Z"
             }
           ]
         }

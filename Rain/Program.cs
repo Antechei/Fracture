@@ -115,13 +115,43 @@ namespace Rain
                 } while ((waiting == true) || (waitingTwo == true));
             }
 
+            void LightningStrike()
+            {
+                string bigPause = "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ";
+
+                Console.ReadKey(true);
+                Console.BackgroundColor = ConsoleColor.White;
+                Console.WriteLine(bigPause);
+                Console.WriteLine(bigPause);
+                Console.WriteLine(bigPause);
+                Console.WriteLine(bigPause);
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.WriteLine(bigPause);
+                Console.WriteLine(bigPause);
+                Console.WriteLine(bigPause);
+                Console.WriteLine(bigPause);
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.White;
+                Console.WriteLine(bigPause);
+                Console.WriteLine(bigPause);
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.WriteLine(bigPause);
+                Console.Clear();
+                Console.WriteLine("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.");
+                Console.ReadKey(true);
+            }
+
             #endregion
 
             //put functions in here to run them as part of the program
             #region Playing
 
-            Instructions();
+            //Instructions();
             fD.FirstScene();
+            LightningStrike();
+            fD.FirstSceneTwo();
 
             #endregion
         }
