@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formatting.cs" />
     <Compile Include="MultiWindow.cs" />
     <Compile Include="FirstDialogue.cs" />
     <Compile Include="Program.cs" />

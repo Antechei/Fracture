@@ -8,13 +8,13 @@ namespace Rain
 {
     internal class Program
     {
-       
         static void Main(string[] args)
         {
             //what it says on the box - put other class references in here to access their content
             #region Class References
 
             FirstDialogue fD = new FirstDialogue();
+            Formatting form = new Formatting();
             MultiWindow mWindow = new MultiWindow();
 
             #endregion
@@ -33,7 +33,7 @@ namespace Rain
                     "\n(Also, I recommend resizing this window so that each of these lines fits on the screen without wrapping! You should do that now)");
                 Console.ReadKey(true);
                 Console.WriteLine("\nAre you ready to progress? (Press the numerical key to select an option}\n[1] Yes.\n[2] No.");
-                
+
                 bool waiting = false;
                 bool waitingTwo = false;
                 bool waitingThree = false;
@@ -68,7 +68,7 @@ namespace Rain
                         }
                     }
                     else
-                    {   
+                    {
                         waitingTwo = true;
                         if (waiting == false)
                         {
@@ -139,8 +139,10 @@ namespace Rain
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine(bigPause);
                 Console.Clear();
-                Console.WriteLine("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.");
+                //form.CharDelay("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.", 1);
+                form.EatInputs(TimeSpan.FromMilliseconds(1444));
                 Console.ReadKey(true);
+                Console.WriteLine("Didnt work");
             }
 
             #endregion
@@ -151,10 +153,10 @@ namespace Rain
             //Instructions();
             fD.FirstScene();
             LightningStrike();
-            fD.FirstSceneTwo();
+            //fD.FirstSceneTwo();
 
             #endregion
-        }
 
+        }
     }
 }
