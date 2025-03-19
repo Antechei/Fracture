@@ -8,7 +8,7 @@ namespace Rain
 {
     //working on making a thing to open other windows, for tutorial info or similar
     //stretch goal!
-    class MultiWindow
+    internal class MultiWindow
     {
         int windowToOpen = 1;
 

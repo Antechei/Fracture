@@ -139,10 +139,8 @@ namespace Rain
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine(bigPause);
                 Console.Clear();
-                //form.CharDelay("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.", 1);
-                form.EatInputs(TimeSpan.FromMilliseconds(1444));
+                Console.WriteLine("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.\n");
                 Console.ReadKey(true);
-                Console.WriteLine("Didnt work");
             }
 
             #endregion
@@ -153,7 +151,7 @@ namespace Rain
             //Instructions();
             fD.FirstScene();
             LightningStrike();
-            //fD.FirstSceneTwo();
+            fD.FirstSceneTwo();
 
             #endregion
 

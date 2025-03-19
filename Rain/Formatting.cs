@@ -83,7 +83,18 @@ namespace Rain
 
         #region Dramatic Delay
 
-        
+        public void WriteDelayedLine(string writeLine, TimeSpan delay, int charDelay) //Line to write, total time taken to write it, delay between each character
+        {
+            Stopwatch stopWatch = Stopwatch.StartNew();
+            TimeSpan lastValue = TimeSpan.Zero;
+            CharDelay(writeLine, charDelay);
+            while (lastValue < delay)
+            {
+                TimeSpan currentValue = stopWatch.Elapsed;            
+                lastValue = currentValue;
+                Console.ReadKey(true);
+            }
+        }
 
         public void CharDelay(string str, int charDelay)
         {
@@ -92,25 +103,17 @@ namespace Rain
             {
                 nextChar = str[i]; //decide the current character in the string
                 Console.Write(nextChar); //print the current character in the string
-                Thread.Sleep(charDelay); //input how long you want it to wait for, it will wait for that length in milliseconds
+                Task.Delay(charDelay).Wait();
+                ClearBuffer();
             }
         }
 
-        public void EatInputs(TimeSpan delay)
+        static void ClearBuffer()
         {
-            Stopwatch stopWatch = Stopwatch.StartNew();
-            TimeSpan lastValue = TimeSpan.Zero;
-            CharDelay("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.", 1);
-            while (lastValue < delay)
-            {
-                Console.Out.Flush();
-                TimeSpan currentValue = stopWatch.Elapsed;            
-                lastValue = currentValue;
-                // run a loop that gets everything currently queued, does something with it, and carries on
-                //for each thing in buffer, readkey(true) ?
-            }
-            
+            while (Console.KeyAvailable)
+            { Console.ReadKey(true); }
         }
+
         #endregion
     }
 }
