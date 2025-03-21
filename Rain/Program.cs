@@ -17,8 +17,7 @@ namespace Rain
             Formatting form = new Formatting();
             MultiWindow mWindow = new MultiWindow();
 
-            #endregion
-           
+            #endregion          
 
             //if you're gonna write a function in this class, put it in this region
             #region Main Functions
