@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rain
 {
-    internal class FirstDialogue
+    internal class OpeningScene
     {
         #region Class References
 
@@ -34,6 +34,8 @@ namespace Rain
             "\n[4] You look outside, and see a bird perched in the tree beyond your window, with its face tucked safely under a wing against the rain." +
             " You smile to yourself and wonder if the downpour has found its way to their part of town yet.";
 
+
+        //needs to be moved into appropriate paths
         private string[] secondDialogue = {
             "\nA warm breeze carries the earthy smell of rainfall through the open window in your bedroom." +
             "\nYou breathe in deeply, and the rhythmic patter on your roof brings a smile to your face.",
@@ -47,6 +49,7 @@ namespace Rain
             "\nPlaceholder Placeholder Placeholder etc"
             };
 
+        //this too
         private string[] thirdDialogue = {
             "You feel a strange giddiness, remembering how as a child, you would build blanket forts during a storm, reading to your stuffed animals by torchlight.",
 
@@ -61,16 +64,10 @@ namespace Rain
 
         #endregion
 
-        #region Variables
-
-        private int path;
-
-        #endregion
-
         #region Scene Functions
 
         //first scene function. put all the doodads in here
-        public void FirstScene()
+        public void Opening()
         {
             SpaceInput();
             foreach (string line in initialDialogue)
@@ -80,20 +77,7 @@ namespace Rain
             }
             Console.WriteLine();
             Console.WriteLine(answersInitial);
-            NumInputFour(secondDialogue);
-        }
-
-        public void FirstSceneTwo()
-        {
-            if (path == 1)
-            { Console.WriteLine(thirdDialogue[0]); }
-            else if (path == 2)
-            { Console.WriteLine(thirdDialogue[1]); }
-            else if (path == 3)
-            { Console.WriteLine(thirdDialogue[2]); }
-            else if(path == 4)
-            { Console.WriteLine(thirdDialogue[3]); }
-            Console.ReadKey(true);
+            NumInputFour();
         }
 
         #endregion
@@ -115,7 +99,7 @@ namespace Rain
 
         //in progress
         //func for selecting narrative options
-        void NumInputFour(String[] dialogue)
+        void NumInputFour()
         {
             bool numSelect = true;
             do
@@ -124,23 +108,19 @@ namespace Rain
                 switch (c)      //check what it was
                 {
                     case '1':   //if it's 1, do this
-                        Console.WriteLine(dialogue[0]);
-                        path = 1;
+                        PathData.path = 1;
                         numSelect = false;
                         break;
                     case '2':   //if it's '2', do this
-                        Console.WriteLine(dialogue[1]);
                         numSelect = false;
-                        path = 2;
+                        PathData.path = 2;
                         break;
                     case '3':   //etc
-                        Console.WriteLine(dialogue[2]);
-                        path = 3;
+                        PathData.path = 3;
                         numSelect = false;
                         break;
                     case '4':   //etc
-                        Console.WriteLine(dialogue[3]);
-                        path = 4;
+                        PathData.path = 4;
                         numSelect = false;
                         break;
                     default:    //if it wasn't any of those things, do this (nothing)

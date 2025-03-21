@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -112,6 +113,38 @@ namespace Rain
         {
             while (Console.KeyAvailable)
             { Console.ReadKey(true); }
+        }
+
+        #endregion
+
+        #region Lightning
+
+        public void LightningStrike(string displayAfter)
+        {
+            string bigPause = "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ";
+
+            Console.ReadKey(true);
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.WriteLine(bigPause);
+            Console.Clear();
+            Console.WriteLine(displayAfter + "\n");
+            Console.ReadKey(true);
         }
 
         #endregion

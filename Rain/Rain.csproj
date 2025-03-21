@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalmPath.cs" />
+    <Compile Include="PathData.cs" />
     <Compile Include="Formatting.cs" />
     <Compile Include="MultiWindow.cs" />
-    <Compile Include="FirstDialogue.cs" />
+    <Compile Include="OpeningScene.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

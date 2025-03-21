@@ -13,11 +13,12 @@ namespace Rain
             //what it says on the box - put other class references in here to access their content
             #region Class References
 
-            FirstDialogue fD = new FirstDialogue();
+            OpeningScene oS = new OpeningScene();
             Formatting form = new Formatting();
             MultiWindow mWindow = new MultiWindow();
 
             #endregion
+           
 
             //if you're gonna write a function in this class, put it in this region
             #region Main Functions
@@ -115,33 +116,7 @@ namespace Rain
                 } while ((waiting == true) || (waitingTwo == true));
             }
 
-            void LightningStrike()
-            {
-                string bigPause = "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ";
 
-                Console.ReadKey(true);
-                Console.BackgroundColor = ConsoleColor.White;
-                Console.WriteLine(bigPause);
-                Console.WriteLine(bigPause);
-                Console.WriteLine(bigPause);
-                Console.WriteLine(bigPause);
-                Console.Clear();
-                Console.BackgroundColor = ConsoleColor.Black;
-                Console.WriteLine(bigPause);
-                Console.WriteLine(bigPause);
-                Console.WriteLine(bigPause);
-                Console.WriteLine(bigPause);
-                Console.Clear();
-                Console.BackgroundColor = ConsoleColor.White;
-                Console.WriteLine(bigPause);
-                Console.WriteLine(bigPause);
-                Console.Clear();
-                Console.BackgroundColor = ConsoleColor.Black;
-                Console.WriteLine(bigPause);
-                Console.Clear();
-                Console.WriteLine("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.\n");
-                Console.ReadKey(true);
-            }
 
             #endregion
 
@@ -149,10 +124,10 @@ namespace Rain
             #region Playing
 
             //Instructions();
-            fD.FirstScene();
-            LightningStrike();
-            fD.FirstSceneTwo();
-
+            oS.Opening();
+            form.LightningStrike("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.");
+            //oS.FirstSceneTwo();
+            Console.ReadKey(true);
             #endregion
 
         }
