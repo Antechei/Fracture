@@ -13,6 +13,14 @@ namespace Rain
 {
     internal class CalmPath
     {
+        #region Class References
+
+        Formatting form = new Formatting();
+
+        #endregion
+
+        #region Dialogue
+
         // “ ” <- do these work?
 
         private string firstDialogue =
@@ -28,6 +36,8 @@ namespace Rain
         private string firstChoice =
             "[1] You contemplate revisiting that experience, glancing at the comfy collection of pillows and plush toys on your bed." +
           "\n[2] Maybe you’ll revisit that experience some time. For tonight, you’re going to take advantage of the energy brought on by the thunderstorm to get some work done.";
+
+        #region Pillow Fort
 
         private string[] thirdDialogue = {
             "You start to smile a big, goofy grin. Are you really...? Yes. You, a grown adult, are going to build a blanket fort. Your heart soars.",
@@ -116,12 +126,91 @@ namespace Rain
             "[1] You’re going to try to fix her. It’s the least you can do for her after all these years." +
           "\n[2] You won’t try to fix her. She’s perfect the way she is, scars and all.";
 
+        //save variable: Repair or Accept?
+
         private string[] repairDialogue = {
             "You wipe the tears from your eyes, feeling suddenly resolute.",
             "“I guess it’s time for surgery.”", //lightning here?
             "You grab a mini sewing kit from inside your desk, and bring Luci and her ear into the fort.",
             "With the power out, the fairy lights provide the best visibility... and their gentle light is reassuring. You hope it is for Luci too.",
-            "“You'll be better in no time, darling.”"
+            "“You'll be better in no time, darling.”",
+            //extra line?
+            "Calling upon all of your tenth grade textiles knowledge, you delicately attempt to reattach her ear." +
+            "\nMore than a few times you have to spend several minutes re-threading the needle after fumbling it, and by the end the tips of your fingers are tender with the effort.",
+            "The eventual result is... amateurish, almost a little Frankenstein-y. But she’s your Luci, whole again.",
+            "You hug her, kissing her little head once more, and lay back together with her."
         };
+
+        private string[] acceptDialogue = {
+            "You bring Luci back up to your room and into the fort. You feel a twinge of sadness looking at her.",
+            "Gently you tuck a little of her stuffing back in, and smooth out her fur with your fingertips as best you can.",
+            "In the morning you’ll close up her wound, but for right now... you just hold her close to your chest, and lay back into the pillows.",
+            "The rain still beats against the roof. Everything smells of wet concrete and ozone now, the open window letting in the finally-cool night air.",
+            "You breathe it in, and your heartbeat settles into a consistent rhythm. With eyes closed you listen to the rolling thunder, gradually moving further into the distance."
+        };
+
+        private string[] eleventhDialogue = {
+            "There’s some movement at your ad-hoc doorway as Violet slinks into the fort and sits down. She looks at you for a moment.",
+            "“Yeah, I know. You’re sorry.”",
+            "Vi flicks her tail and pads across the cubby to settle down comfortably on one of the cushions, brushing up against you on her way.",
+            "“It’s okay. I love you both no matter what.”", //emphasise 'no matter what'
+            "The storm rages on outside, and you’re safe in your fort.",
+            "Violet purrs steadily, curled up for the night.",
+            "You feel a wave of tiredness wash over you, and you hold your battle-hardened childhood toy close.",
+            "You drift off to sleep under the twinkling lights, with a smile on your face and love in your heart.",
+            "This has been a good night." //emphasise!
+        };
+
+        #endregion
+
+        #region Motivation
+
+
+
+        #endregion
+
+        //THE END
+
+        #endregion
+
+        #region Scene Functions
+
+        /*
+         * Console.WriteLine();
+         * Console.ReadKey(true);
+         * Console.Clear();
+        */
+
+        public void CalmOne()
+        {
+            Console.WriteLine(firstDialogue);
+            SpaceInput();
+            form.LightningStrike("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.");
+            SpaceInput();
+            Console.WriteLine(secondDialogue);
+            SpaceInput();
+            Console.WriteLine(firstChoice);
+
+        }
+        
+
+        #endregion
+
+        #region Input Functions
+
+        //func to progress narrative
+        //proceeds on spacebar, ignores all other inputs
+        void SpaceInput()
+        {
+            bool paused = true; //'pause' the narrative
+            do //the thing once
+            {
+                char c = Console.ReadKey(true).KeyChar; //get the key that's pressed
+                if (c == ' ') { paused = false; }         //if it's space, 'unpause' the narrative
+
+            } while (paused); //keep doing it if (paused == true)   
+        }
+
+        #endregion
     }
 }

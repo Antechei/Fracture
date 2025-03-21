@@ -23,6 +23,13 @@ namespace Rain
 
         public static int path { get; set; }
 
+        #region Calm Path
+
+        public static string aestheticOrStructural { get; set; }
+        public static string repairOrAccept { get; set; }
+
+        #endregion
+
         #endregion
 
         #region Functions

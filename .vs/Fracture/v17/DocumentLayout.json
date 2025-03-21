@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|c:\\users\\antechei\\documents\\github\\fracture\\rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\openingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\openingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\formatting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\formatting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\multiwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\multiwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|c:\\users\\antechei\\documents\\github\\fracture\\rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\openingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\openingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|C:\\Users\\Antechei\\Documents\\Github\\Fracture\\rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,50 +34,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeDocumentMoniker": "Rain\\Program.cs",
               "ToolTip": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeToolTip": "Rain\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAACdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T09:49:49.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "OpeningScene.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\OpeningScene.cs",
               "RelativeDocumentMoniker": "Rain\\OpeningScene.cs",
               "ToolTip": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\OpeningScene.cs",
               "RelativeToolTip": "Rain\\OpeningScene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwE8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T09:53:00.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CalmPath.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\CalmPath.cs",
               "RelativeDocumentMoniker": "Rain\\CalmPath.cs",
               "ToolTip": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\CalmPath.cs",
               "RelativeToolTip": "Rain\\CalmPath.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAswH8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T08:26:19.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "MultiWindow.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\MultiWindow.cs",
               "RelativeDocumentMoniker": "Rain\\MultiWindow.cs",
@@ -90,20 +90,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PathData.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\PathData.cs",
               "RelativeDocumentMoniker": "Rain\\PathData.cs",
               "ToolTip": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\PathData.cs",
               "RelativeToolTip": "Rain\\PathData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T07:43:23.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Formatting.cs",
               "DocumentMoniker": "C:\\Users\\Antechei\\Documents\\Github\\Fracture\\Rain\\Formatting.cs",
               "RelativeDocumentMoniker": "Rain\\Formatting.cs",
