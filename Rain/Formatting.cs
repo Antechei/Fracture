@@ -145,6 +145,31 @@ namespace Rain
             Console.WriteLine(displayAfter);
         }
 
+        public void LightningStrikeAlt()
+        {
+            string bigPause = "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ";
+
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.WriteLine(bigPause);
+            Console.WriteLine(bigPause);
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.WriteLine(bigPause);
+            Console.Clear();
+        }
+
         #endregion
     }
 }

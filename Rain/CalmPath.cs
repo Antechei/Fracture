@@ -53,22 +53,34 @@ namespace Rain
 
         //save variable: Structural or Aesthetic?
 
-        private string[] aestheticDialogue = {
-            "\nYou place a fluffy blanket and some cushions on the floor and arrange your plushies around you.",
+        private string[] aestheticDialogueOne = {
+            ">> The aesthetic. You’ll make the cosiest damn blanket fort there’s ever been." +
+            "\n\nYou place a fluffy blanket and some cushions on the floor and arrange your plushies around you.",
             "\nDownstairs in the living room, you take a small string of battery powered fairy lights off of a shelf." +
-            " Violet, your cat, is suddenly mesmerised, and follows you (but mostly the lights) upstairs. You look at Violet and giggle.",
-            "\n“Preeetty lights, huh baby?”",
-            "\nShe swats at them as you dangle the string back and forth in front of her."
+            "\nViolet, your cat, is suddenly mesmerised, and follows you (but mostly the lights) upstairs. You look at Violet and giggle."
         };
 
-        private string[] structuralDialogue = {
-            "\nYou open the linen cupboard and choose an old bedsheet to serve as the fort’s canopy.", //add more?
+        private string aestheticDialogueTwo =
+            "\n“Preeetty lights, huh baby?”";
+
+        private string aestheticDialogueThree =
+            "\n\nShe swats at them as you dangle the string back and forth in front of her.";
+
+        private string[] structuralDialogueOne = {
+            ">> Structural integrity. If you’re building a blanket fort, it’s going to be built to last." +
+            "\n\nYou open the linen cupboard and choose an old bedsheet to serve as the fort’s canopy.", //add more?
             "\nYou begin gathering blankets from throughout the house. Violet, your cat, is lazily napping on the living room couch." +
-            "She takes interest in the sudden activity and wanders upstairs to see what the fuss is about. You smile at her.",
-            "\n“Gonna build a fort with me?”",
-            "\nShe looks back at you with the biggest, dumbest eyes.",
-            "\n“Don’t worry. I’ll handle the construction. You just be cozy and look cute.”"
+            "\nShe takes interest in the sudden activity and wanders upstairs to see what the fuss is about. You smile at her."
         };
+
+        private string structuralDialogueTwo =
+            "\n“Gonna build a fort with me?”";
+
+        private string structuralDialogueThree =
+            "\n\nShe looks back at you with the biggest, dumbest eyes.";
+
+        private string structuralDialogueFour =
+            "\n“Don’t worry. I’ll handle the construction. You just be cozy and look cute.”\n";
 
         private string fortDialogueTwo =
             "\nWith all the required materials, you get to work assembling your masterpiece.";
@@ -92,32 +104,43 @@ namespace Rain
             "\nHm... at some point while assembling the fort, you lost track of Violet. You should call her up so you can keep an eye on her."
         };
 
-        private string[] fortDialogueFive = {
-            "\n“Vi! Violet?”",
-            "\nYou call out for her a few times, between making the appointed, cat summoning kissy-noises.",
+        private string fortDialogueFive =
+            "\n“Vi! Violet?”";
+
+        private string[] fortDialogueFiveTwo = {
+            "\n\nYou call out for her a few times, between making the appointed, cat summoning kissy-noises.",
             "\nYour bedroom door pushes open and Violet slinks in, head held high.",
             "\n...Is there something in her mouth?",
             "\nYou turn on your phone torch to get a better look..."
         };
 
-        private string[] fortDialogueSix = {
-            "\nInside Violet’s mouth, she carries a small, stuffed bunny. You feel your heart skip in your chest.",
-            "\n“Luci! Oh my god!”",
-            "\nYou grab Luci away from Violet, scolding her half-heartedly.",
-            "\n“Bad kitty...”",
-            //extra new line?
+        private string fortDialogueSix =
+            "\nInside Violet’s mouth, she carries a small, stuffed bunny. You feel your heart skip in your chest.";
+
+        private string fortDialogueSixTwo =
+            "\n“Luci! Oh my god!”";
+
+        private string fortDialogueSixThree =
+            "\n\nYou grab Luci away from Violet, scolding her half-heartedly.";
+
+        private string fortDialogueSixFour =
+            "\n“Bad kitty...”";
+
+        private string[] fortDialogueSixFive = {
             "\n\nYou look at your beloved little bunny - your first friend.",
             "\nYou’ve been there for each other since you can remember: playing, laughing, crying, and growing up together.",
             "\nWhen your friends cast aside their toys and declared themselves “too old for that”, you decided that no matter how old you got, you would never outgrow her.",
-            //extra new line?
-            "\n\nYou gently turn her over in your hands, examining the damage...",
-            "\nHer fur is damp and matted, and stuffing falls loosely from the side of her head where one of her floppy ears used to be.",
-            "\n“I’m so sorry, darling...”",
-            "\nYour voice is choked and soft, and a scattering of tears run down your cheeks."
+            "\nYou gently turn her over in your hands, examining the damage...",
+            "\nHer fur is damp and matted, and stuffing falls loosely from the side of her head where one of her floppy ears used to be."
         };
+        private string fortDialogueSixSix =
+            "\n“I’m so sorry, darling...”";
+
+        private string fortDialogueSixSeven =
+            "\n\nYour voice is choked and soft, and a scattering of tears run down your cheeks.";
 
         private string[] fortDialogueSeven = {
-            "\nYou walk downstairs to check Vi’s favourite spots for the missing ear.",
+            "\n\nYou walk downstairs to check Vi’s favourite spots for the missing ear.",
             "\nYou find it where you expect, on the couch: slightly damp and mangled, but otherwise intact.",
             "\nYou take a shaky breath as you look down at them, Luci in one hand and her forlorn ear in the other."
         };
@@ -128,14 +151,23 @@ namespace Rain
 
         //save variable: Repair or Accept?
 
-        private string[] repairDialogue = {
-            "\nYou wipe the tears from your eyes, feeling suddenly resolute.",
-            "\n“I guess it’s time for surgery.”", //lightning here?
+        private string repairDialogue =
+            ">> You’re going to try to fix her. It’s the least you can do for her after all these years." +
+            "\n\nYou wipe the tears from your eyes, feeling suddenly resolute.";
+
+        private string repairDialogueTwo =
+            "\n“I guess it’s time for surgery.”"; //lightning here?
+
+        private string[] repairDialogueThree = {
             "\nYou grab a mini sewing kit from inside your desk, and bring Luci and her ear into the fort.",
-            "\nWith the power out, the fairy lights provide the best visibility... and their gentle light is reassuring. You hope it is for Luci too.",
-            "\n“You'll be better in no time, darling.”",
-            //extra line?
-            "\n\nCalling upon all of your tenth grade textiles knowledge, you delicately attempt to reattach her ear.",
+            "\nWith the power out, the fairy lights provide the best visibility... and their gentle light is reassuring. You hope it is for Luci too."
+        };
+
+        private string repairDialogueFour =
+            "\n“You'll be better in no time, darling.”";
+
+        private string[] repairDialogueFive = {
+            "\n\n\nCalling upon all of your tenth grade textiles knowledge, you delicately attempt to reattach her ear.",
             "\nMore than a few times you have to spend several minutes re-threading the needle after fumbling it, and by the end the tips of your fingers are tender with the effort.",
             "\nThe eventual result is... amateurish, almost a little Frankenstein-y. But she’s your Luci, whole again.",
             "\nYou hug her, kissing her little head once more, and lay back together with her."
@@ -209,27 +241,35 @@ namespace Rain
 
             Console.WriteLine(fortChoiceOne);
             SecondChoice();
-
+            Console.Clear();
             if (PathData.aestheticOrStructural == "Aesthetic")
             {
-                foreach (string line in aestheticDialogue)
+                foreach (string line in aestheticDialogueOne)
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
+                form.WriteDelayedLine(aestheticDialogueTwo, TimeSpan.FromMilliseconds(20), 4);
+                Console.WriteLine(aestheticDialogueThree);
+                SpaceInput();
             }
             else if (PathData.aestheticOrStructural == "Structural")
             {
-                foreach (string line in structuralDialogue)
+                foreach (string line in structuralDialogueOne)
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
+                form.WriteDelayedLine(structuralDialogueTwo, TimeSpan.FromMilliseconds(20), 4);
+                Console.WriteLine(structuralDialogueThree);
+                SpaceInput();
+                form.WriteDelayedLine(structuralDialogueFour, TimeSpan.FromMilliseconds(10), 4);
             }
 
             Console.WriteLine(fortDialogueTwo);
             SpaceInput(); //transition?
             Console.Clear();
+            form.WriteDelayedLine(". . .\n", TimeSpan.FromMilliseconds(10), 50);
             foreach (string line in fortDialogueThree)
             {
                 Console.WriteLine(line);
@@ -240,17 +280,30 @@ namespace Rain
                 Console.WriteLine(line);
                 SpaceInput();
             }
-            foreach (string line in fortDialogueFive)
+            form.WriteDelayedLine(fortDialogueFive, TimeSpan.FromMilliseconds(10), 4);
+            foreach (string line in fortDialogueFiveTwo)
             {
                 Console.WriteLine(line);
                 SpaceInput();
             }
+
             Console.Clear();
-            foreach (string line in fortDialogueSix)
+            form.WriteDelayedLine(". . .\n", TimeSpan.FromMilliseconds(10), 50);
+
+            Console.WriteLine(fortDialogueSix);
+            SpaceInput();
+            form.WriteDelayedLine(fortDialogueSixTwo, TimeSpan.FromMilliseconds(10), 4);
+            Console.WriteLine(fortDialogueSixThree);
+            SpaceInput();
+            form.WriteDelayedLine(fortDialogueSixFour, TimeSpan.FromMilliseconds(10), 4);
+            foreach (string line in fortDialogueSixFive)
             {
                 Console.WriteLine(line);
                 SpaceInput();
             }
+            form.WriteDelayedLine(fortDialogueSixSix, TimeSpan.FromMilliseconds(10), 4);
+            Console.WriteLine(fortDialogueSixSeven);
+            SpaceInput();
             foreach (string line in fortDialogueSeven)
             {
                 Console.WriteLine(line);
@@ -259,10 +312,23 @@ namespace Rain
 
             Console.WriteLine(fortChoiceTwo);
             ThirdChoice();
+            Console.Clear();
 
             if (PathData.repairOrAccept == "Repair")
             {
-                foreach (string line in repairDialogue)
+                Console.WriteLine(repairDialogue);
+                SpaceInput();
+                form.WriteDelayedLine(repairDialogueTwo, TimeSpan.FromMilliseconds(10), 4);
+                form.LightningStrikeAlt();
+                Console.WriteLine(repairDialogue);
+                Console.WriteLine(repairDialogueTwo);
+                foreach (string line in repairDialogueThree)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+                form.WriteDelayedLine(repairDialogueFour, TimeSpan.FromMilliseconds(10), 4);
+                foreach (string line in repairDialogueFive)
                 {
                     Console.WriteLine(line);
                     SpaceInput();
