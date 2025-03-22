@@ -14,6 +14,7 @@ namespace Rain
             #region Class References
 
             OpeningScene oS = new OpeningScene();
+            CalmPath calm = new CalmPath();
             Formatting form = new Formatting();
             MultiWindow mWindow = new MultiWindow();
 
@@ -123,9 +124,8 @@ namespace Rain
             #region Playing
 
             //Instructions();
-            oS.Opening();
-            form.LightningStrike("An abrupt peal of thunder cracks like a whip above the deafening rain. Your windowpanes shudder as the noise reverberates.");
-            //oS.FirstSceneTwo();
+            //oS.Opening();
+            calm.CalmOne();
             Console.ReadKey(true);
             #endregion
 

@@ -21,12 +21,13 @@ namespace Rain
 
         #region Variables
 
-        public static int path { get; set; }
+        public static int path { get; set; } //1, 2, 3, 4
 
-        #region Calm Path
+        #region Calm Path (1)
 
-        public static string aestheticOrStructural { get; set; }
-        public static string repairOrAccept { get; set; }
+        public static string cozyOrMotivated { get; set; } //Cosy, Motivated
+        public static string aestheticOrStructural { get; set; } //Aesthetic, Structural
+        public static string repairOrAccept { get; set; } //Repair, Accept
 
         #endregion
 

@@ -77,7 +77,7 @@ namespace Rain
             }
             Console.WriteLine();
             Console.WriteLine(answersInitial);
-            NumInputFour();
+            PathChoice();
         }
 
         #endregion
@@ -99,7 +99,7 @@ namespace Rain
 
         //in progress
         //func for selecting narrative options
-        void NumInputFour()
+        void PathChoice()
         {
             bool numSelect = true;
             do

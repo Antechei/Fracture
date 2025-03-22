@@ -123,7 +123,6 @@ namespace Rain
         {
             string bigPause = "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ";
 
-            Console.ReadKey(true);
             Console.BackgroundColor = ConsoleColor.White;
             Console.WriteLine(bigPause);
             Console.WriteLine(bigPause);
@@ -143,8 +142,7 @@ namespace Rain
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine(bigPause);
             Console.Clear();
-            Console.WriteLine(displayAfter + "\n");
-            Console.ReadKey(true);
+            Console.WriteLine(displayAfter);
         }
 
         #endregion
