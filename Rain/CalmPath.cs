@@ -159,7 +159,7 @@ namespace Rain
             "\n“I guess it’s time for surgery.”"; //lightning here?
 
         private string[] repairDialogueThree = {
-            "\nYou grab a mini sewing kit from inside your desk, and bring Luci and her ear into the fort.",
+            "\n\nYou grab a mini sewing kit from inside your desk, and bring Luci and her ear into the fort.",
             "\nWith the power out, the fairy lights provide the best visibility... and their gentle light is reassuring. You hope it is for Luci too."
         };
 
@@ -181,17 +181,29 @@ namespace Rain
             "\nYou breathe it in, and your heartbeat settles into a consistent rhythm. With eyes closed you listen to the rolling thunder, gradually moving further into the distance."
         };
 
-        private string[] fortDialogueFinal = {
-            "\nThere’s some movement at your ad-hoc doorway as Violet slinks into the fort and sits down. She looks at you for a moment.",
-            "\n“Yeah, I know. You’re sorry.”",
-            "\nVi flicks her tail and pads across the cubby to settle down comfortably on one of the cushions, brushing up against you on her way.",
-            "\n“It’s okay. I love you both no matter what.”", //emphasise 'no matter what'
-            "\nThe storm rages on outside, and you’re safe in your fort.",
+        private string fortDialogueFinal =
+            "\nThere’s some movement at your ad-hoc doorway as Violet slinks into the fort and sits down. She looks at you for a moment.";
+
+        private string fortDialogueFinalTwo =
+            "\n“Yeah, I know. You’re sorry.”";
+
+        private string fortDialogueFinalThree =
+            "\n\nVi flicks her tail and pads across the cubby to settle down comfortably on one of the cushions, brushing up against you on her way.";
+
+        private string fortDialogueFinalFour =
+            "\n“It’s okay. I love you both ";
+        private string fortDialogueFinalFourTwo =
+            "no matter what.”";
+
+        private string[] fortDialogueFinalFive = {
+            "\n\nThe storm rages on outside, and you’re safe in your fort.",
             "\nViolet purrs steadily, curled up for the night.",
             "\nYou feel a wave of tiredness wash over you, and you hold your battle-hardened childhood toy close.",
-            "\nYou drift off to sleep under the twinkling lights, with a smile on your face and love in your heart.",
-            "\nThis has been a good night." //emphasise!
+            "\nYou drift off to sleep under the twinkling lights, with a smile on your face and love in your heart."
         };
+
+        private string fortDialogueFinalSix =
+            "\nThis has been a good night."; //emphasise!
 
         #endregion
 
@@ -318,10 +330,9 @@ namespace Rain
             {
                 Console.WriteLine(repairDialogue);
                 SpaceInput();
-                form.WriteDelayedLine(repairDialogueTwo, TimeSpan.FromMilliseconds(10), 4);
                 form.LightningStrikeAlt();
                 Console.WriteLine(repairDialogue);
-                Console.WriteLine(repairDialogueTwo);
+                form.WriteDelayedLine(repairDialogueTwo, TimeSpan.FromMilliseconds(10), 4);                
                 foreach (string line in repairDialogueThree)
                 {
                     Console.WriteLine(line);
@@ -343,11 +354,26 @@ namespace Rain
                 }
             }
 
-            foreach (string line in fortDialogueFinal)
+            Console.WriteLine(fortDialogueFinal);
+            SpaceInput();
+            form.WriteDelayedLine(fortDialogueFinalTwo, TimeSpan.FromMilliseconds(10), 4);
+            Console.WriteLine(fortDialogueFinalThree);
+            SpaceInput();
+            form.WriteDelayedLine(fortDialogueFinalFour, TimeSpan.FromMilliseconds(10), 4);
+            form.CDGreen();
+            form.WriteDelayedLine(fortDialogueFinalFourTwo, TimeSpan.FromMilliseconds(10), 4);
+            form.CDefault();
+            foreach (string line in fortDialogueFinalFive)
             {
                 Console.WriteLine(line);
                 SpaceInput();
             }
+            form.CDGreen();
+            Console.WriteLine(fortDialogueFinalSix);
+            SpaceInput();
+            Console.Clear();
+            Console.WriteLine("\n     THE END <3");
+            SpaceInput();
 
         }
 

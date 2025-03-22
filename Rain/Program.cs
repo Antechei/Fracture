@@ -124,7 +124,7 @@ namespace Rain
             #region Playing
 
             //Instructions();
-            //oS.Opening();
+            oS.Opening();
             calm.CalmOne();
             Console.ReadKey(true);
             #endregion
