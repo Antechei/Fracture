@@ -26,13 +26,20 @@ namespace Rain
             "The humid air fills with the scent of wet dirt. Water begins to pool quicker than the earth can absorb it."};
 
         //STRING of options - prints all at once
-        private string answersInitial =
+        private string answersInitialOld =
             "Who are you?" +
             "\n\n[1] You feel calm as you breathe in the scent of rain. It's going to be a lovely night." +
             "\n[2] You put on your headphones to drown out the sound of rain. A knot in your stomach forms as you worry about the stormy night to come." +
             "\n[3] You stand up from your computer, swearing under your breath. You had hoped there wouldn’t be a storm this summer." +
             "\n[4] You look outside, and see a bird perched in the tree beyond your window, with its face tucked safely under a wing against the rain." +
             " You smile to yourself and wonder if the downpour has found its way to their part of town yet.";
+
+        private string answersInitial =
+            "Who are you?" +
+            "\n\n[1] You feel calm as you breathe in the scent of rain. It's going to be a lovely night." +
+            "\n[2] -- Locked --" +
+            "\n[3] -- Locked --" +
+            "\n[4] -- Locked --";
 
 
         //needs to be moved into appropriate paths
@@ -69,7 +76,6 @@ namespace Rain
         //first scene function. put all the doodads in here
         public void Opening()
         {
-            SpaceInput();
             foreach (string line in initialDialogue)
             {
                 Console.WriteLine(line);
@@ -111,7 +117,7 @@ namespace Rain
                         PathData.path = 1;
                         numSelect = false;
                         break;
-                    case '2':   //if it's '2', do this
+/*                    case '2':   //if it's '2', do this
                         numSelect = false;
                         PathData.path = 2;
                         break;
@@ -122,7 +128,7 @@ namespace Rain
                     case '4':   //etc
                         PathData.path = 4;
                         numSelect = false;
-                        break;
+                        break;*/
                     default:    //if it wasn't any of those things, do this (nothing)
                         break;
                 }

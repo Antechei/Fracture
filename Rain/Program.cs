@@ -27,7 +27,7 @@ namespace Rain
             CalmPath calm = new CalmPath();
             Formatting form = new Formatting();
             MultiWindow mWindow = new MultiWindow();
-
+            int selection = 10;
             #endregion          
 
             //if you're gonna write a function in this class, put it in this region
@@ -132,19 +132,88 @@ namespace Rain
                 } while ((waiting == true) || (waitingTwo == true));
             }
 
+            //tutorial thingy
+            void InstructionsNew()
+            {
+                Console.WriteLine("\n Welcome to A Rain Story.txt,\n   aka our silly lil SlamJam2025 submission,\n      aka a short text-based rpg about the rain, possibly?");
+                Console.Write("\n      Written and produced by "); form.CPurple(); Console.Write("LunaMouse "); form.CDefault(); Console.Write("and "); form.CDGreen(); Console.WriteLine("Flora & Stone.");
+                form.CDefault(); Console.Write("\n      With very special thanks to "); form.CPink(); Console.Write("Catgirl Software <3"); form.CDefault();
+                Console.WriteLine("\n\n\n Please press Spacebar to continue...");
+                SpaceInput();
+                Console.Clear();
+                Console.WriteLine("Good job! Spacebar will be used to progress to the next line at most points in the story.");
+                SpaceInput();
+                Console.WriteLine("\n...Unless you're prompted to select an option. In that case, press the numerical key that correlates to the path you wish to take.\n\nGot that?");
+                Console.WriteLine("\n[1] Yeah!\n[2] Not really...");
+                
+                NumProceed();
+                switch (selection)
+                {
+                    case 1:
+                        Console.WriteLine("\nThen here goes nothing!");
+                        break;
+                    case 2:
+                        Console.WriteLine("\nWell, you seem to have figured it out anyway.");
+                        break;
+                    default:
+                        break;
+                }
+                SpaceInput();
+                Console.Clear();
+                Console.WriteLine("\nBy the way: We couldn't quite polish all of the current content before the submission deadline..." +
+                    "\n\nI'd recommend choosing the option to build a pillow fort for your first playthrough! The other option is playable, but... well, you'll see. It's a bit janky >.<" +
+                    "\nAnd the pillow fort path is our favourite anyway :3");
+                SpaceInput();
+                Console.WriteLine("\n\nHave fun <3");
+                SpaceInput();
+                Console.Clear();
+            }
 
+            void SpaceInput()
+            {
+                bool paused = true; //'pause' the narrative
+                do //the thing once
+                {
+                    char c = Console.ReadKey(true).KeyChar; //get the key that's pressed
+                    if (c == ' ') { paused = false; }         //if it's space, 'unpause' the narrative
 
-            #endregion
+                } while (paused); //keep doing it if (paused == true)   
+            }
 
-            //put functions in here to run them as part of the program
-            #region Playing
-            Fullscreen();
-            //Instructions();
-            oS.Opening();
-            calm.CalmOne();
-            Console.ReadKey(true);
-            #endregion
+            void NumProceed()
+            {
+                bool numSelect = true;
+                do
+                {
+                    char c = Console.ReadKey(true).KeyChar; //get the key press
+                    switch (c)      //check what it was
+                    {
+                        case '1':   //if it's 1, do this
+                            selection = 1;
+                            numSelect = false;
+                            break;
+                        case '2':   //if it's '2', do this
+                            selection = 2;
+                            numSelect = false;
+                            break;
+                        default:    //if it wasn't any of those things, do this (nothing)
+                            break;
+                    }
+                } while (numSelect == true);
+            }
+                #endregion
 
+                //put functions in here to run them as part of the program
+                #region Playing
+                Fullscreen();
+                InstructionsNew();
+                oS.Opening();
+                calm.CalmOne();
+                Console.ReadKey(true);
+                #endregion
+
+            
+            
         }
     }
 }

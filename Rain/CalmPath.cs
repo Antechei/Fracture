@@ -38,8 +38,7 @@ namespace Rain
 
         private string firstChoice =
             "\n[1] You contemplate revisiting that experience, glancing at the comfy collection of pillows and plush toys on your bed." +
-            "\n[2] Maybe you’ll revisit that experience some time." +
-                "\nFor tonight, you’re going to take advantage of the extra energy brought on by the thunderstorm to get some more work done.";
+            "\n[2] Maybe you’ll revisit that experience some time. For tonight, you’re going to take advantage of the extra energy brought on by the thunderstorm to get some more work done.";
 
         #region Pillow Fort
 
@@ -213,8 +212,7 @@ namespace Rain
         #region Motivation
 
         private string[] motiDialogueOne = {
-            "\nYour eyes return to the project open on your screen.",
-            "\nYou’ve already been working for a couple hours tonight, after finally hitting the flow state you’d been searching for all week.",
+            "\nYour eyes return to the project open on your screen. You’ve already been working for a couple hours tonight, after finally hitting the flow state you’d been searching for all week.",
             "\nYou reach for the mug resting at the edge of your desk..."
         };
 
@@ -224,26 +222,35 @@ namespace Rain
             "\n[1] It’s a cup of tea." +
             "\n[2] It’s a cup of coffee.";
 
-        private string[] motiDialogueTwo = {
-            "\nYou take a sip. The warmth of the " + PathData.teaOrCoffee + " relaxes you to your core.",
-            "\nYou let out a deep, involuntary sigh-- and realise you probably look like you’re in a commercial.",
-            "\nYou smile and scoff at yourself, returning to your work."
-        };
+        private string[] motiDialogueTwo() {
+            string[] lines = {
+                "\nYou take a sip. The warmth of the " + PathData.teaOrCoffee + " relaxes you to your core.",
+                "\nYou let out a deep, involuntary sigh-- and realise you probably look like you’re in a commercial.",
+                "\nYou smile and scoff at yourself, returning to your work."
+            };
+            return lines; // grrr c# syntax hates my paws
+        }
 
         // ... delay?
 
-        private string[] motiDialogueThree = {
-            "\nHalf an hour passes, and you’re making good progress between intermittent sips of " + PathData.teaOrCoffee + ".",
-            "\nYou reach for the mug once more, when suddenly a deafening thunderclap startles you."
-        };
+        private string[] motiDialogueThree() {
+            string[] lines = {
+                "\nHalf an hour passes, and you’re making good progress between intermittent sips of " + PathData.teaOrCoffee + ".",
+                "\nYou reach for the mug once more, when suddenly a deafening thunderclap startles you."
+            };
+            return lines;
+        }
 
         //lightning
 
-        private string[] motiDialogueFour = {
-            "\nNearly jumping out of your seat, you send the mug and its contents flying.",
-            "\nYour " + PathData.teaOrCoffee + " splashes across the power board connected to your PC, and something inside crackles and pops ominously.", //emphasise pops?
-            "\nYour screen goes dark. What now?"
-        };
+        private string[] motiDialogueFour() {
+            string[] lines = {
+                "\nNearly jumping out of your seat, you send the mug and its contents flying.",
+                "\nYour " + PathData.teaOrCoffee + " splashes across the power board connected to your PC, and something inside crackles and pops ominously.", //emphasise pops?
+                "\nYour screen goes dark. What now?"
+            };
+            return lines;
+        }
 
         private string motiSecondChoice =
             "\n[1] Well, heck. You should probably do something." +
@@ -255,7 +262,7 @@ namespace Rain
             "......";
 
         private string motiSecondChoiceTwo =
-            "\n[1] Well, heck. You should probably do something." + //emphasise 'something'
+            "\n[1] >> Well, heck. You should probably do something. <<" + //emphasise 'something'
             "\n[2] Maybe you didn’t stay frozen long enough. Try again?";
 
         // if hope 2, ... delay
@@ -282,23 +289,25 @@ namespace Rain
 
         // ... delay
 
-        private string[] motiDialogueSix = {
-            "She picks up.\n", //0
-            "“Hey”\n", //1
-            "“Hey.....”\n", //2
-            "“Everything all good?”\n", //3
-            "You hesitate, taking a moment to prepare yourself for the inevitable older sibling sass. Maybe you didn't think this through...\n", //4
-            "“Yeah...”\n", //5
-            "“You know I can hear you cringing from here, you goober. What’s up?”\n", //6
-            "“Ikindaspilledamugof" + PathData.teaOrCoffee + "onmydeskandnowmycomputersbroken-”\n", //7 //shorter than usual delay
-            "The words come out all in a rush, and your sister is chuckling before you've even finished speaking.\n", //8
-            "“Sorry, sorry... one more time, a little slower: you did what?”\n", //9
-            "“I SAID: I kinda spilled a mug of " + PathData.teaOrCoffee + " on my desk and now my computer’s broken!”\n", //10
-            
-        };
+        private string[] motiDialogueSix() {
+            string[] lines = {
+                "\nShe picks up.\n", //0
+                "\n“Hey”\n", //1
+                "\n“Hey.....”\n", //2
+                "\n“Everything all good?”\n", //3
+                "\nYou hesitate, taking a moment to prepare yourself for the inevitable older sibling sass. Maybe you didn't think this through...\n", //4
+                "“Yeah...”\n", //5
+                "\n“You know I can hear you cringing from here, you goober. What’s up?”\n", //6
+                "\n“Ikindaspilledamugof" + PathData.teaOrCoffee + "onmydeskandnowmycomputersbroken-”\n", //7 //shorter than usual delay
+                "\nThe words come out all in a rush, and your sister is chuckling before you've even finished speaking.\n", //8
+                "“Sorry, sorry... one more time, a little slower: you did what?”\n", //9
+                "\n“I SAID: I kinda spilled a mug of " + PathData.teaOrCoffee + " on my desk and now my computer’s broken!”\n", //10
+            };
+            return lines;
+        }
 
         private string[] motiDialogueSeven = {
-            "\nYou explain the situation to your sister, and she advises you (after she’s spent a couple minutes laughing at your expense)" +
+            "\nYou explain the situation to your sister, and she advises you (after she’s spent a couple minutes laughing at your expense) " +
             "not to try anything before you’ve replaced the power board.",
             "\nWith one last laugh, she wishes you good luck, and you thank her before hanging up.",
             "\nThe only problem is, you can’t remember where a spare power board might be...",
@@ -323,7 +332,7 @@ namespace Rain
             "\nOld chargers, network cables, extension cords, and power boards.";
 
         private string garaDialogueThree =
-        "\n“Yesss!”";
+        "\n“Yesss!”\n";
 
         private string[] garaDialogueFour = {
             "\nYou dig one of them out of the box and set it aside.",
@@ -371,15 +380,16 @@ namespace Rain
         };
 
         private string[] motiDialogueEight = {
-            "\nYou leave the garage and find your cat, Violet, sitting on the couch.\nThe headlamp you’re wearing shines in her perfect little face, and she runs off somewhere else.\n",
-            "”Oops. Sorry, Vi...”",
+            "\nYou leave the garage and find your cat, Violet, sitting on the couch.\n\nThe headlamp you’re wearing shines in her perfect little face, and she runs off somewhere else.\n",
+            "”Oops. Sorry, Vi...”\n",
         };
 
+        // elle note long first line?
         private string[] motiDialogueNine = {
             "\nYou switch it off and sit down at the edge of the couch, losing yourself staring out the living room window for a moment." +
-            "\nThe rain outside is heavy enough now to be visible even in the dark.",
+            "\n\nThe rain outside is heavy enough now to be visible even in the dark.",
             "\nThe wind whips it around into mesmerising patterns, and occasionally a flash of lightning will illuminate the whole scene in stark blue-white contrast.",
-            "\nYou watch mindlessly, contemplating your options"
+            "\nYou watch it mindlessly, contemplating your options."
         };
 
         private string motiChoiceFour =
@@ -392,7 +402,7 @@ namespace Rain
         private string[] toniDialogueOne = {
             "\n- and hey, maybe getting soaked to the bone will improve your mood. Somehow.",
             "\nYou open the back door and walk around the side of the house, caught in the full force of the storm." +
-            "\nWithin a few steps, you're already totally drenched",
+            "\n\nWithin a few steps, you're already totally drenched.",
             "\nYou yank the breaker box open and begin flipping switches- any switches, really, to see if anything happens. Totally advisable during a thunderstorm.",
             "\n...Nothing happens. It occurs to you to walk out and check if the other houses on the street have their lights on.",
             "\nYou half-run across the soggy concrete and duck into the front yard. Standing in your driveway, you see that the entire neighbourhood has gone dark.",
@@ -414,7 +424,7 @@ namespace Rain
             "“Thanks for cheering me up, Vi. I can always count on you to be a bit of a goofball, huh?”";
 
         private string[] toniDialogueFour = {
-            "\nAfter hanging out with Violet for a bit, you change into your pyjamas, getting properly dry and settling into bed.",
+            "\n\nAfter hanging out with Violet for a bit, you change into your pyjamas, getting properly dry and settling into bed.",
             "\nToday didn’t really go how you wanted it to. But that’s alright... there’s always tomorrow.",
             "\nAs the storm finally begins to settle into a softer melody you drift off to sleep, with Vi purring- and then softly snoring- at your side."
         };
@@ -443,7 +453,7 @@ namespace Rain
             "\nA couple hours later, the first of your tea candles fades and gutters out with a curling wisp of smoke. The others look like they’re not far behind.",
             "\nYou perform a big stretch and yawn of your own, closing the book and setting it down next to you.",
             "\nBy now, the storm has settled into a soft melody, with the occasional rumble of thunder far away in the distance. " +
-            "\nYou smile and giggle to yourself a little, still enjoying the ambiance.",
+            "You smile and giggle to yourself a little, still enjoying the ambiance.",
             "\nGetting up to extinguish the rest of your hard-working candles and change into your pyjamas, you figure it’s time to get some sleep yourself.",
             "\nYou settle back into bed next to Vi, and find yourself getting drowsy within a couple minutes.",
             "\nOne way or another, it all worked out in the end... if not how you’d planned. You drift away to sleep, lulled by the sound of the rain."
@@ -492,25 +502,30 @@ namespace Rain
 
                 Console.WriteLine(motiFirstChoice);
                 FirstMotiChoice();
-                Console.Clear();
 
-                foreach (string line in motiDialogueTwo)
+                foreach (string line in motiDialogueTwo())
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
 
-                // ... transition
+                Console.Clear();
+                form.WriteDelayedLine(". . .", TimeSpan.FromMilliseconds(10), 50);
 
-                foreach (string line in motiDialogueThree)
+                foreach (string line in motiDialogueThree())
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
 
                 form.LightningStrikeAlt();
+                // elle dialogue three is dup'd?
+                foreach (string line in motiDialogueThree())
+                {
+                    Console.WriteLine(line);
+                }
 
-                foreach (string line in motiDialogueFour)
+                foreach (string line in motiDialogueFour())
                 {
                     Console.WriteLine(line);
                     SpaceInput();
@@ -534,10 +549,19 @@ namespace Rain
 
                     if (PathData.actOrHope == "Hope2")
                     {
-                        Console.WriteLine(hopeDialogueThree);  
-                        Console.WriteLine(hopeDialogueFour);
-                        Console.WriteLine(hopeDialogueFive);
-                        // delays, check - do we require 1 for this?
+                        // elle note added the foreach
+                        Console.WriteLine(hopeDialogueThree[0]);
+                            SpaceInput();
+                        Console.WriteLine(hopeDialogueThree[1]);
+                            NumOneInput();
+                        Console.WriteLine(hopeDialogueFour[0]);
+                        SpaceInput();
+                        Console.WriteLine(hopeDialogueFour[1]);
+                        NumOneInput();
+                        Console.WriteLine(hopeDialogueFive[0]);
+                        SpaceInput();
+                        Console.WriteLine(hopeDialogueFive[1]);
+                        NumOneInput();                               // delays, check - do we require 1 for this? yes
                     }
                 }
 
@@ -548,13 +572,22 @@ namespace Rain
                 }
 
                 // delay
+                var motiSix = motiDialogueSix();
+                Console.WriteLine(motiSix[0]);
+                SpaceInput();
+                form.WriteDelayedLine(motiSix[1], TimeSpan.FromMilliseconds(10), 4); // hey
+                form.WriteDelayedLine(motiSix[2], TimeSpan.FromMilliseconds(10), 4); // hey
+                form.WriteDelayedLine(motiSix[3], TimeSpan.FromMilliseconds(10), 4); // everything good?
+                Console.WriteLine(motiSix[4]);
+                SpaceInput();
+                form.WriteDelayedLine(motiSix[5], TimeSpan.FromMilliseconds(10), 4); // yeah
+                form.WriteDelayedLine(motiSix[6], TimeSpan.FromMilliseconds(10), 4); // cringe
+                form.WriteDelayedLine(motiSix[7], TimeSpan.FromMilliseconds(10), 2); // spill
+                Console.WriteLine(motiSix[8]);
+                SpaceInput();
+                form.WriteDelayedLine(motiSix[9], TimeSpan.FromMilliseconds(10), 4); // use your words puppy
+                form.WriteDelayedLine(motiSix[10], TimeSpan.FromMilliseconds(10), 4); // spill
 
-                foreach (string line in motiDialogueSix)
-                {
-                    Console.WriteLine(line);
-                    SpaceInput();
-                    // delays and timing
-                }
 
                 foreach (string line in motiDialogueSeven)
                 {
@@ -579,10 +612,123 @@ namespace Rain
                     Console.WriteLine(garaDialogueTwo);
                     SpaceInput();
 
+                    // elle zone begin here sorry hana
+
+                    form.WriteDelayedLine(garaDialogueThree, TimeSpan.FromMilliseconds(10), 4);
+
+                    foreach (string line in garaDialogueFour)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+
+                    foreach (string line in garaDialogueFive)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
                 }
+                else if (PathData.garageOrHallway == "Hallway")
+                {
+                    foreach (string line in hallDialogueOne)
+                    {
+                        Console.WriteLine(line);    
+                        SpaceInput();
+                    }
+
+                    Console.WriteLine(hallChoiceOne);
+                    FirstHallChoice();
+
+                    // Console.Clear(); // elle - hmmm?
+                    if (PathData.kazooOrNoKazoo == "Kazoo")
+                    {
+                        foreach (string line in kazooDialogue)
+                        {
+                            Console.WriteLine(line);
+                            SpaceInput();
+                        }
+                    }
+                    else if (PathData.kazooOrNoKazoo == "NoKazoo")
+                    {
+                        foreach (string line in noKazooDialogue)
+                        {
+                            Console.WriteLine(line);
+                            SpaceInput();
+                        }
+                    }
+                    // paths kazzoo/no kazzoo merge
+                    foreach (string line in hallDialogueTwo)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+                }
+                // paths garage/hallway merge
+
+                Console.WriteLine(motiDialogueEight[0]);
+                SpaceInput();
+
+                form.WriteDelayedLine(motiDialogueEight[1], TimeSpan.FromMilliseconds(10), 4);
+
+
+                foreach (string line in motiDialogueNine)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+
+                Console.WriteLine(motiChoiceFour);
+                FourthMotiChoice();
+                Console.Clear();
+                if (PathData.tonightOrTomorrow == "Tonight")
+                {
+                    foreach (string line in toniDialogueOne)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+                    foreach (string line in toniDialogueTwo)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+
+                    form.WriteDelayedLine(toniDialogueThree, TimeSpan.FromMilliseconds(10), 4);
+
+                    foreach (string line in toniDialogueFour)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+
+                    Console.WriteLine(toniDialogueFinal);
+                    SpaceInput();
+                    // todo emphasis on final
+                }
+                else if (PathData.tonightOrTomorrow == "Tomorrow")
+                {
+                    foreach (string line in tomoDialogueOne)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+
+                    // todo delay and clear ?
+                    foreach (string line in tomoDialogueTwo)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+
+                    // todo emph
+                    Console.WriteLine(tomoDialogueFinal);
+                    SpaceInput();
+                }
+                // choice tonight/tomorrow merges
+                // the end
             }
 
-
+            //------------ OTHER PATH ----------------
 
             else if (PathData.cozyOrMotivated == "Cozy")
             {
@@ -712,13 +858,11 @@ namespace Rain
                 form.CDGreen();
                 Console.WriteLine(fortDialogueFinalSix);
                 SpaceInput();
-                Console.Clear();
-                Console.WriteLine("\n     THE END <3");
-                SpaceInput();
             }
-
-            
-
+            // paths motivated/cozy merge
+            Console.Clear();
+            Console.WriteLine("\n     THE END <3");
+            SpaceInput();
         }
 
 
@@ -902,29 +1046,8 @@ namespace Rain
             } while (numSelect == true);
         }
 
-        void FourthMotiChoice()
-        {
-            bool numSelect = true;
-            do
-            {
-                char c = Console.ReadKey(true).KeyChar;
-                switch (c)
-                {
-                    case '1':
-                        PathData.kazooOrNoKazoo = "Kazoo";
-                        numSelect = false;
-                        break;
-                    case '2':
-                        numSelect = false;
-                        PathData.kazooOrNoKazoo = "NoKazoo";
-                        break;
-                    default:
-                        break;
-                }
-            } while (numSelect == true);
-        }
 
-        void FifthMotiChoice()
+        void FourthMotiChoice()
         {
             bool numSelect = true;
             do
@@ -939,6 +1062,28 @@ namespace Rain
                     case '2':
                         numSelect = false;
                         PathData.tonightOrTomorrow = "Tomorrow";
+                        break;
+                    default:
+                        break;
+                }
+            } while (numSelect == true);
+        }
+
+        void FirstHallChoice()
+        {
+            bool numSelect = true;
+            do
+            {
+                char c = Console.ReadKey(true).KeyChar;
+                switch (c)
+                {
+                    case '1':
+                        PathData.kazooOrNoKazoo = "Kazoo";
+                        numSelect = false;
+                        break;
+                    case '2':
+                        numSelect = false;
+                        PathData.kazooOrNoKazoo = "NoKazoo";
                         break;
                     default:
                         break;
