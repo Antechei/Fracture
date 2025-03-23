@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Rain
 {
+    static class Winuser
+    {
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool ShowWindow(System.IntPtr hWnd, int cmd);
+
+        public const int SW_MAXIMISE = 3;
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -22,6 +31,12 @@ namespace Rain
 
             //if you're gonna write a function in this class, put it in this region
             #region Main Functions
+
+            void Fullscreen()
+            {
+                Process p = Process.GetCurrentProcess();
+                Winuser.ShowWindow(p.MainWindowHandle, Winuser.SW_MAXIMISE);
+            }
 
             //temp amusing tutorial thingy
             void Instructions()
@@ -122,7 +137,7 @@ namespace Rain
 
             //put functions in here to run them as part of the program
             #region Playing
-
+            Fullscreen();
             //Instructions();
             oS.Opening();
             calm.CalmOne();
