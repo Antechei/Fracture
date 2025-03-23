@@ -213,9 +213,9 @@ namespace Rain
         #region Motivation
 
         private string[] motiDialogueOne = {
-            "Your eyes return to the project open on your screen.",
-            "You’ve already been working for a couple hours tonight, after finally hitting the flow state you’d been searching for all week.",
-            "You reach for the mug resting at the edge of your desk..."
+            "\nYour eyes return to the project open on your screen.",
+            "\nYou’ve already been working for a couple hours tonight, after finally hitting the flow state you’d been searching for all week.",
+            "\nYou reach for the mug resting at the edge of your desk..."
         };
 
         //do the hypothetical project choice thing here
@@ -225,24 +225,24 @@ namespace Rain
             "\n[2] It’s a cup of coffee.";
 
         private string[] motiDialogueTwo = {
-            "You take a sip. The warmth of the " + PathData.teaOrCoffee + " relaxes you to your core.",
-            "You let out a deep, involuntary sigh-- and realise you probably look like you’re in a commercial.",
-            "You smile and scoff at yourself, returning to your work."
+            "\nYou take a sip. The warmth of the " + PathData.teaOrCoffee + " relaxes you to your core.",
+            "\nYou let out a deep, involuntary sigh-- and realise you probably look like you’re in a commercial.",
+            "\nYou smile and scoff at yourself, returning to your work."
         };
 
         // ... delay?
 
         private string[] motiDialogueThree = {
-            "Half an hour passes, and you’re making good progress between intermittent sips of " + PathData.teaOrCoffee + ".",
-            "You reach for the mug once more, when suddenly a deafening thunderclap startles you."
+            "\nHalf an hour passes, and you’re making good progress between intermittent sips of " + PathData.teaOrCoffee + ".",
+            "\nYou reach for the mug once more, when suddenly a deafening thunderclap startles you."
         };
 
         //lightning
 
         private string[] motiDialogueFour = {
-            "Nearly jumping out of your seat, you send the mug and its contents flying.",
-            "Your " + PathData.teaOrCoffee + " splashes across the power board connected to your PC, and something inside crackles and pops ominously.", //emphasise pops?
-            "Your screen goes dark. What now?"
+            "\nNearly jumping out of your seat, you send the mug and its contents flying.",
+            "\nYour " + PathData.teaOrCoffee + " splashes across the power board connected to your PC, and something inside crackles and pops ominously.", //emphasise pops?
+            "\nYour screen goes dark. What now?"
         };
 
         private string motiSecondChoice =
@@ -250,7 +250,7 @@ namespace Rain
             "\n[2] Stay completely still. Maybe if you don’t do anything, it’ll start working again."; //emphasise 'something' and 'anything'
 
         private string hopeDialogueOne =
-            "Aaaand";
+            "\nAaaand";
         private string hopeDialogueTwo =
             "......";
 
@@ -261,123 +261,197 @@ namespace Rain
         // if hope 2, ... delay
 
         private string[] hopeDialogueThree = {
-            "Oh?",
-            "[1] What’s this?"
+            "\nOh?",
+            "\n[1] What’s this?"
         };
         //hope2 input
         private string[] hopeDialogueFour = {
-            "It’s working again! Your screen flashes back on.",
-            "[1] Hell yes! Really?!"
+            "\nIt’s working again! Your screen flashes back on.",
+            "\n[1] Hell yes! Really?!"
         };
         //hope2 input
         private string[] hopeDialogueFive = {
-            "No, not really... It’s still broken. Was worth a try, though!",
-            "[1] Well, heck. Now you really should do something about it." //emphasis 'really should do something'
+            "\nNo, not really... It’s still broken. Was worth a try, though!",
+            "\n[1] Well, heck. Now you really should do something about it." //emphasis 'really should do something'
         };
 
         private string[] motiDialogueFive = {
-            "After you clean up the mess, your mind immediately goes to your older sister, who generally knows about This Kind Of Stuff.",
+            "\nAfter you clean up the mess, your mind immediately goes to your older sister, who generally knows about This Kind Of Stuff.",
             "\nYou pick up your phone and dial her number."
         };
 
         // ... delay
 
         private string[] motiDialogueSix = {
-            "She picks up.", //0
-            "“Hey”", //1
-            "“Hey.....”", //2
-            "“Everything all good?”", //3
-            "You hesitate, taking a moment to prepare yourself for the inevitable older sibling sass. Maybe you didn't think this through...", //4
-            "“Yeah...”", //5
-            "“You know I can hear you cringing from here, you goober. What’s up?”", //6
-            "“Ikindaspilledamugof" + PathData.teaOrCoffee + "onmydeskandnowmycomputersbroken-”", //7 //shorter than usual delay
-            "The words come out all in a rush, and your sister is chuckling before you've even finished speaking.", //8
-            "“Sorry, sorry... one more time, a little slower: you did what?”", //9
-            "“I SAID: I kinda spilled a mug of " + PathData.teaOrCoffee + " on my desk and now my computer’s broken!”", //10
+            "She picks up.\n", //0
+            "“Hey”\n", //1
+            "“Hey.....”\n", //2
+            "“Everything all good?”\n", //3
+            "You hesitate, taking a moment to prepare yourself for the inevitable older sibling sass. Maybe you didn't think this through...\n", //4
+            "“Yeah...”\n", //5
+            "“You know I can hear you cringing from here, you goober. What’s up?”\n", //6
+            "“Ikindaspilledamugof" + PathData.teaOrCoffee + "onmydeskandnowmycomputersbroken-”\n", //7 //shorter than usual delay
+            "The words come out all in a rush, and your sister is chuckling before you've even finished speaking.\n", //8
+            "“Sorry, sorry... one more time, a little slower: you did what?”\n", //9
+            "“I SAID: I kinda spilled a mug of " + PathData.teaOrCoffee + " on my desk and now my computer’s broken!”\n", //10
             
         };
 
         private string[] motiDialogueSeven = {
-            "You explain the situation to your sister, and she advises you (after she’s spent a couple minutes laughing at your expense)" + 
+            "\nYou explain the situation to your sister, and she advises you (after she’s spent a couple minutes laughing at your expense)" +
             "not to try anything before you’ve replaced the power board.",
-            "With one last laugh, she wishes you good luck, and you thank her before hanging up.",
-            "The only problem is, you can’t remember where a spare power board might be...",
+            "\nWith one last laugh, she wishes you good luck, and you thank her before hanging up.",
+            "\nThe only problem is, you can’t remember where a spare power board might be...",
         };
 
         private string motiChoiceThree =
-            "[1] Maybe in the garage? You probably have one sitting in a box." +
-            "[2] Possibly in the hallway cupboards. That’s where you put everything you don’t know what to do with, after all.";
+            "\n[1] Maybe in the garage? You probably have one sitting in a box." +
+            "\n[2] Possibly in the hallway cupboards. That’s where you put everything you don’t know what to do with, after all.";
 
         // Variable: Garage or Hallway
 
         private string[] garaDialogueOne = {
-            "You walk downstairs and through the door to the garage. It smells faintly of oil, petrol, and the old tools your dad gave you.",
-            "You flick on the lights, some old fluorescents, which take a second to warm-up. A shelving unit with a bunch of unlabelled plastic containers sit against the far wall.",
-            "You may as well start at the top and work your way down..."
+            "\nYou walk downstairs and through the door to the garage. It smells faintly of oil, petrol, and the old tools your dad gave you.",
+            "\nYou flick on the lights, some old fluorescents, which take a second to warm-up. A shelving unit with a bunch of unlabelled plastic containers sit against the far wall.",
+            "\nYou may as well start at the top and work your way down..."
         };
 
         //delay ...
 
-        private string garaDialogueTwo = 
-            "After searching fruitlessly through a few boxes, you open one full of power cables:" +
+        private string garaDialogueTwo =
+            "\nAfter searching fruitlessly through a few boxes, you open one full of power cables:" +
             "\nOld chargers, network cables, extension cords, and power boards.";
 
         private string garaDialogueThree =
-        "“Yesss!”";
+        "\n“Yesss!”";
 
         private string[] garaDialogueFour = {
-            "You dig one of them out of the box and set it aside.",
-            "As you begin to tidy up the mess your search created, the fluorescent lights above you go dead, and the quiet, ambient hum of the house's electronics falls silent."
+            "\nYou dig one of them out of the box and set it aside.",
+            "\nAs you begin to tidy up the mess your search created, the fluorescent lights above you go dead, and the quiet, ambient hum of the house's electronics falls silent."
         };
 
         private string[] garaDialogueFive = {
-            "Luckily, your household had the presence of mind to keep a headlamp in the garage for just these situations.",
-            "You retrieve it from a nearby shelf (nearly tripping over the remaining mess in the process- whoops!) and put it on.",
-            "It makes you feel cool, like someone who digs for treasure.",
-            "Well, you found a power board... but now you have bigger problems."
+            "\nLuckily, your household had the presence of mind to keep a headlamp in the garage for just these situations.",
+            "\nYou retrieve it from a nearby shelf (nearly tripping over the remaining mess in the process- whoops!) and put it on.",
+            "\nIt makes you feel cool, like someone who digs for treasure.",
+            "\nWell, you found a power board... but now you have bigger problems."
         };
 
         private string[] hallDialogueOne = {
-            "You retrieve a stepladder from the laundry and begin scouring through the hallway cupboards.",
-            "Riffling through years of ephemera, you find Christmas decorations, Halloween costumes, and even few small instruments, which you don’t remember ever being used.",
-            "But no power boards. They’re probably in the garage after all...",
-            "You do find a kazoo among the aforementioned instruments, though."
+            "\nYou retrieve a stepladder from the laundry and begin scouring through the hallway cupboards.",
+            "\nRiffling through years of ephemera, you find Christmas decorations, Halloween costumes, and even few small instruments, which you don’t remember ever being used.",
+            "\nBut no power boards. They’re probably in the garage after all...",
+            "\nYou do find a kazoo among the aforementioned instruments, though."
         };
 
         private string hallChoiceOne =
-            "[1] This will totally come in handy." +
-            "[2] Now is not the time for kazoos!";
+            "\n[1] This will totally come in handy." +
+            "\n[2] Now is not the time for kazoos!";
 
         // kazoo variable
 
         private string[] kazooDialogue = {
-            "You put the kazoo in your mouth as you dismount the stepladder. So far, you have found one kazoo, and zero powerboards.",
-            "You hum a mournful tune, like the music that plays when someone gets an answer wrong on a gameshow. Which you don’t watch. Obviously.",
-            "...As if cued by your song, all the lights in the house go dark.",
-            "You feel like this is cosmic retribution for taking the kazoo, but you don’t know for sure. You put it in your pocket nevertheless."
+            "\nYou put the kazoo in your mouth as you dismount the stepladder. So far, you have found one kazoo, and zero powerboards.",
+            "\nYou hum a mournful tune, like the music that plays when someone gets an answer wrong on a gameshow. Which you don’t watch. Obviously.",
+            "\n...As if cued by your song, all the lights in the house go dark.",
+            "\nYou feel like this is cosmic retribution for taking the kazoo, but you don’t know for sure. You put it in your pocket nevertheless."
         };
 
         private string[] noKazooDialogue = {
-            "You discard the kazoo, demoralised by your fruitless search. Goddamn it. You just want to know if the last two hours of your work was saved.",
-            "To make matters worse, suddenly all the lights in the house flicker off."
+            "\nYou discard the kazoo, demoralised by your fruitless search. Goddamn it. You just want to know if the last two hours of your work was saved.",
+            "\nTo make matters worse, suddenly all the lights in the house flicker off."
         };
 
         private string[] hallDialogueTwo = {
-            "With a steadying breath, you dismount the stepladder.",
-            "You carefully make your way to the garage, occasionally stumbling over random furniture, and only stubbing your toes really badly one time.",
-            "In the garage, you retrieve the headlamp that’s kept for these sorts of situations. You feel a little better equipped now that you’re not wandering around in the dark.",
-            "...Your foot hurts, though.",
-            "Well... with the power entirely out, finding a power board is a bit pointless!"
+            "\nWith a steadying breath, you dismount the stepladder.",
+            "\nYou carefully make your way to the garage, occasionally stumbling over random furniture, and only stubbing your toes really badly one time.",
+            "\nIn the garage, you retrieve the headlamp that’s kept for these sorts of situations. You feel a little better equipped now that you’re not wandering around in the dark.",
+            "\n...Your foot hurts, though.",
+            "\nWell... with the power entirely out, finding a power board is a bit pointless!"
         };
 
-
-
-        private string[] motiDialogueN = {
-            "",
+        private string[] motiDialogueEight = {
+            "\nYou leave the garage and find your cat, Violet, sitting on the couch.\nThe headlamp you’re wearing shines in her perfect little face, and she runs off somewhere else.\n",
+            "”Oops. Sorry, Vi...”",
         };
 
-        private string motiDialogueNN =
-            "";
+        private string[] motiDialogueNine = {
+            "\nYou switch it off and sit down at the edge of the couch, losing yourself staring out the living room window for a moment." +
+            "\nThe rain outside is heavy enough now to be visible even in the dark.",
+            "\nThe wind whips it around into mesmerising patterns, and occasionally a flash of lightning will illuminate the whole scene in stark blue-white contrast.",
+            "\nYou watch mindlessly, contemplating your options"
+        };
+
+        private string motiChoiceFour =
+            "\n[1] You need to try and fix this. You’re in far too deep to quit now.Go outside and check the breaker box." +
+            "\n[2] This can all be tomorrow’s problem. The storm is too nice to waste on stressing out about it.";
+
+        // var Tonight or Tomorrow
+        //lightning?
+
+        private string[] toniDialogueOne = {
+            "\n- and hey, maybe getting soaked to the bone will improve your mood. Somehow.",
+            "\nYou open the back door and walk around the side of the house, caught in the full force of the storm." +
+            "\nWithin a few steps, you're already totally drenched",
+            "\nYou yank the breaker box open and begin flipping switches- any switches, really, to see if anything happens. Totally advisable during a thunderstorm.",
+            "\n...Nothing happens. It occurs to you to walk out and check if the other houses on the street have their lights on.",
+            "\nYou half-run across the soggy concrete and duck into the front yard. Standing in your driveway, you see that the entire neighbourhood has gone dark.",
+            "\nYou just stand there for a moment in the wind and the rain. There’s nothing you can do, then."
+        };
+
+        private string[] toniDialogueTwo = {
+            "\nYou go back inside and dejectedly trudge upstairs.",
+            "\nSnatching a towel from the bathroom, you attempt to towel yourself off, with mixed success.",
+            "\nIt’d probably be a good idea to change out of these clothes, but you can’t quite summon the motivation.",
+            "\nInstead you just sit on the edge of your bed, staring at nothing. The rain beats against the house around you for a long minute.",
+            "\nAfter a while, your bedroom door pushes open as Violet walks in, looking at you curiously. She stops in front of your bed, rears back, and jumps up next to you.",
+            "\nYou nearly push her away in frustration when she struts across your lap, arching her back and mewing politely for attention. But she doesn’t deserve that.",
+            "\nInstead your extend your hand, running it through her silky fur and letting her push her face against you happily. The mews quickly turn into a soft purr.",
+            "\nShe sniffs your shirt curiously, which is still quite wet from the rain... then screws up her face and sneezes. You laugh quietly.\n"
+        };
+
+        private string toniDialogueThree =
+            "“Thanks for cheering me up, Vi. I can always count on you to be a bit of a goofball, huh?”";
+
+        private string[] toniDialogueFour = {
+            "\nAfter hanging out with Violet for a bit, you change into your pyjamas, getting properly dry and settling into bed.",
+            "\nToday didn’t really go how you wanted it to. But that’s alright... there’s always tomorrow.",
+            "\nAs the storm finally begins to settle into a softer melody you drift off to sleep, with Vi purring- and then softly snoring- at your side."
+        };
+
+        private string toniDialogueFinal =
+            "\nIt wasn’t what you planned... but perhaps you learned something from that."; //colour
+
+        private string[] tomoDialogueOne = {
+            "\nYeah... time to go upstairs, try to relax, and deal with things in the morning.",
+            "\nLetting yourself off the hook, you feel conflicted for a moment, but with a deep breath it morphs into an immense relief.",
+            "\nYou remember how happy you felt when the rain broke earlier tonight. Where did that all go?",
+            "\nYou got so caught up in trying to solve problem after problem, you barely got to relax and enjoy the weather.",
+            "\nA weight off your shoulders, you walk back upstairs to your room, Violet appearing from somewhere to follow inquisitively behind you.",
+            "\nYou tried your best to be productive... now you’re going to let yourself rest.",
+            "\nYou retrieve a handful of tea candles from a drawer in your desk and scatter them around the room," +
+            " watching the shadows dance around the walls with your movement as you light each one.",
+            "\nGrabbing a book, you curl up on your bed. The rain continues to loudly batter the tin roof of your house.",
+            "\nVi performs the biggest yawn you’ve ever seen, and curls up to cuddle next to you.",
+            "\nWith a comfortable sigh and a smile, you gently scritch the fur between her ears, eliciting a rumbling purr.",
+            "\nThe only thing left to do is open your book and settle in."
+        };
+
+        //delay ... and clear (?)
+
+        private string[] tomoDialogueTwo = {
+            "\nA couple hours later, the first of your tea candles fades and gutters out with a curling wisp of smoke. The others look like they’re not far behind.",
+            "\nYou perform a big stretch and yawn of your own, closing the book and setting it down next to you.",
+            "\nBy now, the storm has settled into a soft melody, with the occasional rumble of thunder far away in the distance. " +
+            "\nYou smile and giggle to yourself a little, still enjoying the ambiance.",
+            "\nGetting up to extinguish the rest of your hard-working candles and change into your pyjamas, you figure it’s time to get some sleep yourself.",
+            "\nYou settle back into bed next to Vi, and find yourself getting drowsy within a couple minutes.",
+            "\nOne way or another, it all worked out in the end... if not how you’d planned. You drift away to sleep, lulled by the sound of the rain."
+        };
+
+        private string tomoDialogueFinal =
+            "\nIt wasn’t what you planned. But it was still a good night."; //colour
+
         #endregion
 
         //THE END
@@ -506,8 +580,6 @@ namespace Rain
                     SpaceInput();
 
                 }
-
-
             }
 
 
