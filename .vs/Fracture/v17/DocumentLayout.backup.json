@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Github\\Fracture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|e:\\github\\fracture\\rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|E:\\Github\\Fracture\\rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|e:\\github\\fracture\\rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|solutionrelative:rain\\calmpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A095C81-EBAD-41F4-B361-C815E652C9F9}|Rain\\Rain.csproj|E:\\Github\\Fracture\\rain\\openingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,19 +34,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeDocumentMoniker": "Rain\\Program.cs",
               "ToolTip": "E:\\Github\\Fracture\\Rain\\Program.cs",
               "RelativeToolTip": "Rain\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T09:49:49.271Z"
+              "WhenOpened": "2025-03-14T09:49:49.271Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -62,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CalmPath.cs",
               "DocumentMoniker": "E:\\Github\\Fracture\\Rain\\CalmPath.cs",
               "RelativeDocumentMoniker": "Rain\\CalmPath.cs",

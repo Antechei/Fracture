@@ -15,6 +15,7 @@ namespace Rain
 
         public const int SW_MAXIMISE = 3;
     }
+
     internal class Program
     {
         static void Main(string[] args)

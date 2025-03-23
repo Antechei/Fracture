@@ -29,6 +29,12 @@ namespace Rain
         public static string aestheticOrStructural { get; set; } //Aesthetic, Structural
         public static string repairOrAccept { get; set; } //Repair, Accept
 
+        public static string teaOrCoffee { get; set; } //tea, coffee
+        public static string actOrHope { get; set; } //Act, Hope, Hope2
+        public static string garageOrHallway { get; set; } //Garage, Hallway
+        public static string kazooOrNoKazoo { get; set; } //Kazoo, NoKazoo
+        public static string tonightOrTomorrow { get; set; } //Tonight, Tomorrow
+
         #endregion
 
         #endregion

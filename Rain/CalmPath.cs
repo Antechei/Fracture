@@ -5,6 +5,8 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -36,7 +38,8 @@ namespace Rain
 
         private string firstChoice =
             "\n[1] You contemplate revisiting that experience, glancing at the comfy collection of pillows and plush toys on your bed." +
-            "\n[2] Maybe you’ll revisit that experience some time. For tonight, you’re going to take advantage of the energy brought on by the thunderstorm to get some work done.";
+            "\n[2] Maybe you’ll revisit that experience some time." +
+                "\nFor tonight, you’re going to take advantage of the extra energy brought on by the thunderstorm to get some more work done.";
 
         #region Pillow Fort
 
@@ -209,8 +212,172 @@ namespace Rain
 
         #region Motivation
 
+        private string[] motiDialogueOne = {
+            "Your eyes return to the project open on your screen.",
+            "You’ve already been working for a couple hours tonight, after finally hitting the flow state you’d been searching for all week.",
+            "You reach for the mug resting at the edge of your desk..."
+        };
+
+        //do the hypothetical project choice thing here
+
+        private string motiFirstChoice =
+            "\n[1] It’s a cup of tea." +
+            "\n[2] It’s a cup of coffee.";
+
+        private string[] motiDialogueTwo = {
+            "You take a sip. The warmth of the " + PathData.teaOrCoffee + " relaxes you to your core.",
+            "You let out a deep, involuntary sigh-- and realise you probably look like you’re in a commercial.",
+            "You smile and scoff at yourself, returning to your work."
+        };
+
+        // ... delay?
+
+        private string[] motiDialogueThree = {
+            "Half an hour passes, and you’re making good progress between intermittent sips of " + PathData.teaOrCoffee + ".",
+            "You reach for the mug once more, when suddenly a deafening thunderclap startles you."
+        };
+
+        //lightning
+
+        private string[] motiDialogueFour = {
+            "Nearly jumping out of your seat, you send the mug and its contents flying.",
+            "Your " + PathData.teaOrCoffee + " splashes across the power board connected to your PC, and something inside crackles and pops ominously.", //emphasise pops?
+            "Your screen goes dark. What now?"
+        };
+
+        private string motiSecondChoice =
+            "\n[1] Well, heck. You should probably do something." +
+            "\n[2] Stay completely still. Maybe if you don’t do anything, it’ll start working again."; //emphasise 'something' and 'anything'
+
+        private string hopeDialogueOne =
+            "Aaaand";
+        private string hopeDialogueTwo =
+            "......";
+
+        private string motiSecondChoiceTwo =
+            "\n[1] Well, heck. You should probably do something." + //emphasise 'something'
+            "\n[2] Maybe you didn’t stay frozen long enough. Try again?";
+
+        // if hope 2, ... delay
+
+        private string[] hopeDialogueThree = {
+            "Oh?",
+            "[1] What’s this?"
+        };
+        //hope2 input
+        private string[] hopeDialogueFour = {
+            "It’s working again! Your screen flashes back on.",
+            "[1] Hell yes! Really?!"
+        };
+        //hope2 input
+        private string[] hopeDialogueFive = {
+            "No, not really... It’s still broken. Was worth a try, though!",
+            "[1] Well, heck. Now you really should do something about it." //emphasis 'really should do something'
+        };
+
+        private string[] motiDialogueFive = {
+            "After you clean up the mess, your mind immediately goes to your older sister, who generally knows about This Kind Of Stuff.",
+            "\nYou pick up your phone and dial her number."
+        };
+
+        // ... delay
+
+        private string[] motiDialogueSix = {
+            "She picks up.", //0
+            "“Hey”", //1
+            "“Hey.....”", //2
+            "“Everything all good?”", //3
+            "You hesitate, taking a moment to prepare yourself for the inevitable older sibling sass. Maybe you didn't think this through...", //4
+            "“Yeah...”", //5
+            "“You know I can hear you cringing from here, you goober. What’s up?”", //6
+            "“Ikindaspilledamugof" + PathData.teaOrCoffee + "onmydeskandnowmycomputersbroken-”", //7 //shorter than usual delay
+            "The words come out all in a rush, and your sister is chuckling before you've even finished speaking.", //8
+            "“Sorry, sorry... one more time, a little slower: you did what?”", //9
+            "“I SAID: I kinda spilled a mug of " + PathData.teaOrCoffee + " on my desk and now my computer’s broken!”", //10
+            
+        };
+
+        private string[] motiDialogueSeven = {
+            "You explain the situation to your sister, and she advises you (after she’s spent a couple minutes laughing at your expense)" + 
+            "not to try anything before you’ve replaced the power board.",
+            "With one last laugh, she wishes you good luck, and you thank her before hanging up.",
+            "The only problem is, you can’t remember where a spare power board might be...",
+        };
+
+        private string motiChoiceThree =
+            "[1] Maybe in the garage? You probably have one sitting in a box." +
+            "[2] Possibly in the hallway cupboards. That’s where you put everything you don’t know what to do with, after all.";
+
+        // Variable: Garage or Hallway
+
+        private string[] garaDialogueOne = {
+            "You walk downstairs and through the door to the garage. It smells faintly of oil, petrol, and the old tools your dad gave you.",
+            "You flick on the lights, some old fluorescents, which take a second to warm-up. A shelving unit with a bunch of unlabelled plastic containers sit against the far wall.",
+            "You may as well start at the top and work your way down..."
+        };
+
+        //delay ...
+
+        private string garaDialogueTwo = 
+            "After searching fruitlessly through a few boxes, you open one full of power cables:" +
+            "\nOld chargers, network cables, extension cords, and power boards.";
+
+        private string garaDialogueThree =
+        "“Yesss!”";
+
+        private string[] garaDialogueFour = {
+            "You dig one of them out of the box and set it aside.",
+            "As you begin to tidy up the mess your search created, the fluorescent lights above you go dead, and the quiet, ambient hum of the house's electronics falls silent."
+        };
+
+        private string[] garaDialogueFive = {
+            "Luckily, your household had the presence of mind to keep a headlamp in the garage for just these situations.",
+            "You retrieve it from a nearby shelf (nearly tripping over the remaining mess in the process- whoops!) and put it on.",
+            "It makes you feel cool, like someone who digs for treasure.",
+            "Well, you found a power board... but now you have bigger problems."
+        };
+
+        private string[] hallDialogueOne = {
+            "You retrieve a stepladder from the laundry and begin scouring through the hallway cupboards.",
+            "Riffling through years of ephemera, you find Christmas decorations, Halloween costumes, and even few small instruments, which you don’t remember ever being used.",
+            "But no power boards. They’re probably in the garage after all...",
+            "You do find a kazoo among the aforementioned instruments, though."
+        };
+
+        private string hallChoiceOne =
+            "[1] This will totally come in handy." +
+            "[2] Now is not the time for kazoos!";
+
+        // kazoo variable
+
+        private string[] kazooDialogue = {
+            "You put the kazoo in your mouth as you dismount the stepladder. So far, you have found one kazoo, and zero powerboards.",
+            "You hum a mournful tune, like the music that plays when someone gets an answer wrong on a gameshow. Which you don’t watch. Obviously.",
+            "...As if cued by your song, all the lights in the house go dark.",
+            "You feel like this is cosmic retribution for taking the kazoo, but you don’t know for sure. You put it in your pocket nevertheless."
+        };
+
+        private string[] noKazooDialogue = {
+            "You discard the kazoo, demoralised by your fruitless search. Goddamn it. You just want to know if the last two hours of your work was saved.",
+            "To make matters worse, suddenly all the lights in the house flicker off."
+        };
+
+        private string[] hallDialogueTwo = {
+            "With a steadying breath, you dismount the stepladder.",
+            "You carefully make your way to the garage, occasionally stumbling over random furniture, and only stubbing your toes really badly one time.",
+            "In the garage, you retrieve the headlamp that’s kept for these sorts of situations. You feel a little better equipped now that you’re not wandering around in the dark.",
+            "...Your foot hurts, though.",
+            "Well... with the power entirely out, finding a power board is a bit pointless!"
+        };
 
 
+
+        private string[] motiDialogueN = {
+            "",
+        };
+
+        private string motiDialogueNN =
+            "";
         #endregion
 
         //THE END
@@ -252,7 +419,7 @@ namespace Rain
             }
 
             Console.WriteLine(fortChoiceOne);
-            SecondChoice();
+            FirstFortChoice();
             Console.Clear();
             if (PathData.aestheticOrStructural == "Aesthetic")
             {
@@ -323,7 +490,7 @@ namespace Rain
             }
 
             Console.WriteLine(fortChoiceTwo);
-            ThirdChoice();
+            SecondFortChoice();
             Console.Clear();
 
             if (PathData.repairOrAccept == "Repair")
@@ -394,6 +561,16 @@ namespace Rain
 
             } while (paused); //keep doing it if (paused == true)   
         }
+        void NumOneInput()
+        {
+            bool paused = true; //'pause' the narrative
+            do //the thing once
+            {
+                char c = Console.ReadKey(true).KeyChar; //get the key that's pressed
+                if (c == '1') { paused = false; }         //if it's 1, 'unpause' the narrative
+
+            } while (paused); //keep doing it if (paused == true)   
+        }
 
         void FirstChoice()
         {
@@ -417,7 +594,7 @@ namespace Rain
             } while (numSelect == true);
         }
 
-        void SecondChoice()
+        void FirstFortChoice()
         {
             bool numSelect = true;
             do
@@ -438,7 +615,7 @@ namespace Rain
                 }
             } while (numSelect == true);
         }
-        void ThirdChoice()
+        void SecondFortChoice()
         {
             bool numSelect = true;
             do
@@ -453,6 +630,138 @@ namespace Rain
                     case '2':
                         numSelect = false;
                         PathData.repairOrAccept = "Accept";
+                        break;
+                    default:
+                        break;
+                }
+            } while (numSelect == true);
+        }
+
+        void FirstMotiChoice()
+        {
+            bool numSelect = true;
+            do
+            {
+                char c = Console.ReadKey(true).KeyChar;
+                switch (c)
+                {
+                    case '1':
+                        PathData.teaOrCoffee = "tea";
+                        numSelect = false;
+                        break;
+                    case '2':
+                        numSelect = false;
+                        PathData.teaOrCoffee = "coffee";
+                        break;
+                    default:
+                        break;
+                }
+            } while (numSelect == true);
+        }
+
+        void SecondMotiChoice()
+        {
+            bool numSelect = true;
+            do
+            {
+                char c = Console.ReadKey(true).KeyChar;
+                switch (c)
+                {
+                    case '1':
+                        PathData.actOrHope = "Act";
+                        numSelect = false;
+                        break;
+                    case '2':
+                        numSelect = false;
+                        PathData.actOrHope = "Hope";
+                        break;
+                    default:
+                        break;
+                }
+            } while (numSelect == true);
+        }
+
+        void SecondMotiChoiceTwo()
+        {
+            bool numSelect = true;
+            do
+            {
+                char c = Console.ReadKey(true).KeyChar;
+                switch (c)
+                {
+                    case '1':
+                        PathData.actOrHope = "Act";
+                        numSelect = false;
+                        break;
+                    case '2':
+                        numSelect = false;
+                        PathData.actOrHope = "Hope2";
+                        break;
+                    default:
+                        break;
+                }
+            } while (numSelect == true);
+        }
+
+        void ThirdMotiChoice()
+        {
+            bool numSelect = true;
+            do
+            {
+                char c = Console.ReadKey(true).KeyChar;
+                switch (c)
+                {
+                    case '1':
+                        PathData.garageOrHallway = "Garage";
+                        numSelect = false;
+                        break;
+                    case '2':
+                        numSelect = false;
+                        PathData.garageOrHallway = "Hallway";
+                        break;
+                    default:
+                        break;
+                }
+            } while (numSelect == true);
+        }
+
+        void FourthMotiChoice()
+        {
+            bool numSelect = true;
+            do
+            {
+                char c = Console.ReadKey(true).KeyChar;
+                switch (c)
+                {
+                    case '1':
+                        PathData.kazooOrNoKazoo = "Kazoo";
+                        numSelect = false;
+                        break;
+                    case '2':
+                        numSelect = false;
+                        PathData.kazooOrNoKazoo = "NoKazoo";
+                        break;
+                    default:
+                        break;
+                }
+            } while (numSelect == true);
+        }
+
+        void FifthMotiChoice()
+        {
+            bool numSelect = true;
+            do
+            {
+                char c = Console.ReadKey(true).KeyChar;
+                switch (c)
+                {
+                    case '1':
+                        PathData.tonightOrTomorrow = "Tonight";
+                        numSelect = false;
+                        break;
+                    case '2':
+                        numSelect = false;
+                        PathData.tonightOrTomorrow = "Tomorrow";
                         break;
                     default:
                         break;
