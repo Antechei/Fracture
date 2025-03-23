@@ -405,142 +405,247 @@ namespace Rain
             
             if (PathData.cozyOrMotivated == "Motivated")
             {
-                Console.WriteLine("\n(I haven't programmed this path yet, sorry!)");
+                /*Console.WriteLine("\n(I haven't programmed this path yet, sorry!)");
                 SpaceInput();
                 Console.WriteLine("(Returning you to the other path...)");
-                SpaceInput();
-            }
-            //else if (PathData.cozyOrMotivated == "Cozy") {this needs to be enabled once we have more than one path here}
+                SpaceInput();*/
 
-            foreach (string line in fortDialogueOne)
-            {
-                Console.WriteLine(line);
-                SpaceInput();
-            }
-
-            Console.WriteLine(fortChoiceOne);
-            FirstFortChoice();
-            Console.Clear();
-            if (PathData.aestheticOrStructural == "Aesthetic")
-            {
-                foreach (string line in aestheticDialogueOne)
+                foreach (string line in motiDialogueOne)
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
-                form.WriteDelayedLine(aestheticDialogueTwo, TimeSpan.FromMilliseconds(20), 4);
-                Console.WriteLine(aestheticDialogueThree);
-                SpaceInput();
-            }
-            else if (PathData.aestheticOrStructural == "Structural")
-            {
-                foreach (string line in structuralDialogueOne)
+
+                Console.WriteLine(motiFirstChoice);
+                FirstMotiChoice();
+                Console.Clear();
+
+                foreach (string line in motiDialogueTwo)
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
-                form.WriteDelayedLine(structuralDialogueTwo, TimeSpan.FromMilliseconds(20), 4);
-                Console.WriteLine(structuralDialogueThree);
-                SpaceInput();
-                form.WriteDelayedLine(structuralDialogueFour, TimeSpan.FromMilliseconds(10), 4);
-            }
 
-            Console.WriteLine(fortDialogueTwo);
-            SpaceInput(); //transition?
-            Console.Clear();
-            form.WriteDelayedLine(". . .\n", TimeSpan.FromMilliseconds(10), 50);
-            foreach (string line in fortDialogueThree)
-            {
-                Console.WriteLine(line);
-                SpaceInput();
-            }           
-            foreach (string line in fortDialogueFour)
-            {
-                Console.WriteLine(line);
-                SpaceInput();
-            }
-            form.WriteDelayedLine(fortDialogueFive, TimeSpan.FromMilliseconds(10), 4);
-            foreach (string line in fortDialogueFiveTwo)
-            {
-                Console.WriteLine(line);
-                SpaceInput();
-            }
+                // ... transition
 
-            Console.Clear();
-            form.WriteDelayedLine(". . .\n", TimeSpan.FromMilliseconds(10), 50);
+                foreach (string line in motiDialogueThree)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
 
-            Console.WriteLine(fortDialogueSix);
-            SpaceInput();
-            form.WriteDelayedLine(fortDialogueSixTwo, TimeSpan.FromMilliseconds(10), 4);
-            Console.WriteLine(fortDialogueSixThree);
-            SpaceInput();
-            form.WriteDelayedLine(fortDialogueSixFour, TimeSpan.FromMilliseconds(10), 4);
-            foreach (string line in fortDialogueSixFive)
-            {
-                Console.WriteLine(line);
-                SpaceInput();
-            }
-            form.WriteDelayedLine(fortDialogueSixSix, TimeSpan.FromMilliseconds(10), 4);
-            Console.WriteLine(fortDialogueSixSeven);
-            SpaceInput();
-            foreach (string line in fortDialogueSeven)
-            {
-                Console.WriteLine(line);
-                SpaceInput();
-            }
-
-            Console.WriteLine(fortChoiceTwo);
-            SecondFortChoice();
-            Console.Clear();
-
-            if (PathData.repairOrAccept == "Repair")
-            {
-                Console.WriteLine(repairDialogue);
-                SpaceInput();
                 form.LightningStrikeAlt();
-                Console.WriteLine(repairDialogue);
-                form.WriteDelayedLine(repairDialogueTwo, TimeSpan.FromMilliseconds(10), 4);                
-                foreach (string line in repairDialogueThree)
+
+                foreach (string line in motiDialogueFour)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+
+                    // emphasise pops
+                }
+
+                Console.WriteLine(motiSecondChoice);
+                SecondMotiChoice();
+                Console.Clear();
+
+                if (PathData.actOrHope == "Hope")
+                {
+                    Console.WriteLine(hopeDialogueOne);
+                    // pausssse
+                    Console.WriteLine(hopeDialogueTwo);
+
+                    Console.WriteLine(motiSecondChoiceTwo);
+                    SecondMotiChoiceTwo();
+                    Console.Clear();
+
+                    if (PathData.actOrHope == "Hope2")
+                    {
+                        Console.WriteLine(hopeDialogueThree);  
+                        Console.WriteLine(hopeDialogueFour);
+                        Console.WriteLine(hopeDialogueFive);
+                        // delays, check - do we require 1 for this?
+                    }
+                }
+
+                foreach (string line in motiDialogueFive)
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
-                form.WriteDelayedLine(repairDialogueFour, TimeSpan.FromMilliseconds(10), 4);
-                foreach (string line in repairDialogueFive)
+
+                // delay
+
+                foreach (string line in motiDialogueSix)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                    // delays and timing
+                }
+
+                foreach (string line in motiDialogueSeven)
                 {
                     Console.WriteLine(line);
                     SpaceInput();
                 }
-            }
-            else if (PathData.repairOrAccept == "Accept")
-            {
-                foreach (string line in acceptDialogue)
+
+                Console.WriteLine(motiChoiceThree);
+                ThirdMotiChoice();
+                Console.Clear();
+
+                if (PathData.garageOrHallway == "Garage")
                 {
-                    Console.WriteLine(line);
+                    foreach (string line in garaDialogueOne)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+
+                    // delay
+
+                    Console.WriteLine(garaDialogueTwo);
                     SpaceInput();
+
                 }
+
+
             }
 
-            Console.WriteLine(fortDialogueFinal);
-            SpaceInput();
-            form.WriteDelayedLine(fortDialogueFinalTwo, TimeSpan.FromMilliseconds(10), 4);
-            Console.WriteLine(fortDialogueFinalThree);
-            SpaceInput();
-            form.WriteDelayedLine(fortDialogueFinalFour, TimeSpan.FromMilliseconds(10), 4);
-            form.CDGreen();
-            form.WriteDelayedLine(fortDialogueFinalFourTwo, TimeSpan.FromMilliseconds(10), 4);
-            form.CDefault();
-            foreach (string line in fortDialogueFinalFive)
+
+
+            else if (PathData.cozyOrMotivated == "Cozy")
             {
-                Console.WriteLine(line);
+                foreach (string line in fortDialogueOne)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+
+                Console.WriteLine(fortChoiceOne);
+                FirstFortChoice();
+                Console.Clear();
+                if (PathData.aestheticOrStructural == "Aesthetic")
+                {
+                    foreach (string line in aestheticDialogueOne)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+                    form.WriteDelayedLine(aestheticDialogueTwo, TimeSpan.FromMilliseconds(20), 4);
+                    Console.WriteLine(aestheticDialogueThree);
+                    SpaceInput();
+                }
+                else if (PathData.aestheticOrStructural == "Structural")
+                {
+                    foreach (string line in structuralDialogueOne)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+                    form.WriteDelayedLine(structuralDialogueTwo, TimeSpan.FromMilliseconds(20), 4);
+                    Console.WriteLine(structuralDialogueThree);
+                    SpaceInput();
+                    form.WriteDelayedLine(structuralDialogueFour, TimeSpan.FromMilliseconds(10), 4);
+                }
+
+                Console.WriteLine(fortDialogueTwo);
+                SpaceInput(); //transition?
+                Console.Clear();
+                form.WriteDelayedLine(". . .\n", TimeSpan.FromMilliseconds(10), 50);
+                foreach (string line in fortDialogueThree)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+                foreach (string line in fortDialogueFour)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+                form.WriteDelayedLine(fortDialogueFive, TimeSpan.FromMilliseconds(10), 4);
+                foreach (string line in fortDialogueFiveTwo)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+
+                Console.Clear();
+                form.WriteDelayedLine(". . .\n", TimeSpan.FromMilliseconds(10), 50);
+
+                Console.WriteLine(fortDialogueSix);
+                SpaceInput();
+                form.WriteDelayedLine(fortDialogueSixTwo, TimeSpan.FromMilliseconds(10), 4);
+                Console.WriteLine(fortDialogueSixThree);
+                SpaceInput();
+                form.WriteDelayedLine(fortDialogueSixFour, TimeSpan.FromMilliseconds(10), 4);
+                foreach (string line in fortDialogueSixFive)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+                form.WriteDelayedLine(fortDialogueSixSix, TimeSpan.FromMilliseconds(10), 4);
+                Console.WriteLine(fortDialogueSixSeven);
+                SpaceInput();
+                foreach (string line in fortDialogueSeven)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+
+                Console.WriteLine(fortChoiceTwo);
+                SecondFortChoice();
+                Console.Clear();
+
+                if (PathData.repairOrAccept == "Repair")
+                {
+                    Console.WriteLine(repairDialogue);
+                    SpaceInput();
+                    form.LightningStrikeAlt();
+                    Console.WriteLine(repairDialogue);
+                    form.WriteDelayedLine(repairDialogueTwo, TimeSpan.FromMilliseconds(10), 4);
+                    foreach (string line in repairDialogueThree)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+                    form.WriteDelayedLine(repairDialogueFour, TimeSpan.FromMilliseconds(10), 4);
+                    foreach (string line in repairDialogueFive)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+                }
+                else if (PathData.repairOrAccept == "Accept")
+                {
+                    foreach (string line in acceptDialogue)
+                    {
+                        Console.WriteLine(line);
+                        SpaceInput();
+                    }
+                }
+
+                Console.WriteLine(fortDialogueFinal);
+                SpaceInput();
+                form.WriteDelayedLine(fortDialogueFinalTwo, TimeSpan.FromMilliseconds(10), 4);
+                Console.WriteLine(fortDialogueFinalThree);
+                SpaceInput();
+                form.WriteDelayedLine(fortDialogueFinalFour, TimeSpan.FromMilliseconds(10), 4);
+                form.CDGreen();
+                form.WriteDelayedLine(fortDialogueFinalFourTwo, TimeSpan.FromMilliseconds(10), 4);
+                form.CDefault();
+                foreach (string line in fortDialogueFinalFive)
+                {
+                    Console.WriteLine(line);
+                    SpaceInput();
+                }
+                form.CDGreen();
+                Console.WriteLine(fortDialogueFinalSix);
+                SpaceInput();
+                Console.Clear();
+                Console.WriteLine("\n     THE END <3");
                 SpaceInput();
             }
-            form.CDGreen();
-            Console.WriteLine(fortDialogueFinalSix);
-            SpaceInput();
-            Console.Clear();
-            Console.WriteLine("\n     THE END <3");
-            SpaceInput();
+
+            
 
         }
 
