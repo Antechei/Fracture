@@ -76,6 +76,7 @@ namespace Rain
         //first scene function. put all the doodads in here
         public void Opening()
         {
+            form.CDefault();
             foreach (string line in initialDialogue)
             {
                 Console.WriteLine(line);

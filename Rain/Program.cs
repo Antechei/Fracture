@@ -20,13 +20,14 @@ namespace Rain
     {
         static void Main(string[] args)
         {
-            //what it says on the box - put other class references in here to access their content
-            #region Class References
+            //what it says on the box - put other class references in here to access their content, and varialbes if u need one for a function
+            #region Variables and References
 
             OpeningScene oS = new OpeningScene();
             CalmPath calm = new CalmPath();
             Formatting form = new Formatting();
             MultiWindow mWindow = new MultiWindow();
+
             int selection = 10;
             #endregion          
 
@@ -160,10 +161,6 @@ namespace Rain
                 }
                 SpaceInput();
                 Console.Clear();
-                Console.WriteLine("\nBy the way: We couldn't quite polish all of the current content before the submission deadline..." +
-                    "\n\nI'd recommend choosing the option to build a pillow fort for your first playthrough! The other option is playable, but... well, you'll see. It's a bit janky >.<" +
-                    "\nAnd the pillow fort path is our favourite anyway :3");
-                SpaceInput();
                 Console.WriteLine("\n\nHave fun <3");
                 SpaceInput();
                 Console.Clear();
@@ -203,14 +200,16 @@ namespace Rain
             }
                 #endregion
 
-                //put functions in here to run them as part of the program
-                #region Playing
-                Fullscreen();
-                InstructionsNew();
-                oS.Opening();
-                calm.CalmOne();
-                Console.ReadKey(true);
-                #endregion
+            //put functions in here to run them as part of the program
+            #region Playing
+
+            Fullscreen();
+            InstructionsNew();
+            oS.Opening();
+            calm.CalmOne();
+            Console.ReadKey(true);
+
+            #endregion
 
             
             
